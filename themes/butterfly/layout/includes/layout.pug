@@ -1,0 +1,53 @@
+- var hideAside = !theme.aside.enable || page.aside === false ? 'hide-aside' : ''
+
+doctype html
+html(lang=config.language data-theme=theme.display_mode)
+  head
+    if (is_post())
+      script(type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false")
+      script(type="text/javascript") window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"1fd8b3cd2ba70f51528f758b7","lid":"0a5bf38afd","uniqueMethods":true}) })
+    include ./head.pug
+  body
+    if theme.fireworks && theme.fireworks.enable
+      canvas.fireworks
+
+    !=partial('includes/mobile-sidebar/index', {}, {cache:theme.fragment_cache})
+
+    include ./sidebar.pug
+
+    #body-wrap
+      if theme.background
+        - var is_photo = theme.background.substring(3,0) === 'url' ? 'photo':'color'
+        #web_bg(data-type=is_photo)
+      include ./header/index.pug
+
+      if (!is_post())
+        main#content-inner.layout_page(class=hideAside)
+          if body
+            div!= body
+          else
+            block content
+            include widget/index.pug
+      else
+        main#content-inner.layout_post
+          if body
+            div!= body
+          else
+            block content
+      
+      - var footer_bg = theme.footer_bg == false ? '' : bg_img
+      - var is_bg = theme.footer_bg == false ? 'color' : 'photo'
+      footer#footer(style=footer_bg data-type=is_bg)
+        !=partial('includes/footer', {}, {cache:theme.fragment_cache})
+
+    include ./rightside.pug
+
+    !=partial('includes/search/index', {}, {cache:theme.fragment_cache})
+
+    each item in theme.CDN_USE.js
+      script(src=url_for(item))
+      
+    include ./additional-js.pug
+    
+
+    
