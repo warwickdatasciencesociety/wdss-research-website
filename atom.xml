@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Research @ WDSS</title>
+  
+  <subtitle>Delivering insight powered by data</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://research.warwickdatascience.com/"/>
+  <updated>2020-04-19T00:00:00.000Z</updated>
+  <id>https://research.warwickdatascience.com/</id>
+  
+  <author>
+    <name>Warwick Data Science</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What Factors Actually Affect Your Grades?</title>
+    <link href="https://research.warwickdatascience.com/school-success/"/>
+    <id>https://research.warwickdatascience.com/school-success/</id>
+    <published>2020-04-19T00:00:00.000Z</published>
+    <updated>2020-04-19T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      If only there was some way to know how well you&#39;d do in your exams. Well, perhaps data science can get us part way there. Read on to find out how.
+    
+    </summary>
+    
+    
+      <category term="Social Sciences" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/"/>
+    
+      <category term="Education" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/Education/"/>
+    
+    
+      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+    
+      <category term="data-analysis" scheme="https://research.warwickdatascience.com/tags/data-analysis/"/>
+    
+      <category term="regression" scheme="https://research.warwickdatascience.com/tags/regression/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gibrat&#39;s Law: The Central Limit Theorem&#39;s Forgotten Twin</title>
+    <link href="https://research.warwickdatascience.com/gibrats-law/"/>
+    <id>https://research.warwickdatascience.com/gibrats-law/</id>
+    <published>2020-04-10T00:00:00.000Z</published>
+    <updated>2020-05-08T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Hiding in the shadow of the central limit theorm is a lesser-know, but still fascinating aspect of statistics. Read this post to what this is and how we can use it.
+    
+    </summary>
+    
+    
+      <category term="Meta" scheme="https://research.warwickdatascience.com/categories/Meta/"/>
+    
+      <category term="Mathematics" scheme="https://research.warwickdatascience.com/categories/Mathematics/"/>
+    
+      <category term="Statistics" scheme="https://research.warwickdatascience.com/categories/Mathematics/Statistics/"/>
+    
+    
+      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+    
+      <category term="normal-distribution" scheme="https://research.warwickdatascience.com/tags/normal-distribution/"/>
+    
+  </entry>
+  
+</feed>
