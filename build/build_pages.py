@@ -17,16 +17,16 @@ for post in os.listdir('content'):
     print(f"[BUILD] Converting and formatting post {post}")
 
     # convert to markdown
-    process = subprocess.Popen([
-        #'python', '-m',
-        'jupyter', 'nbconvert',
-        notebook_path, '--to', 'markdown',
+    process = subprocess.Popen(' '.join([
+        'jupyter nbconvert',
+        notebook_path,
+        '--to markdown',
         '--TagRemovePreprocessor.enabled=True',
         r"--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
         r"--TagRemovePreprocessor.remove_input_tags=['remove_input']",
         r"--TagRemovePreprocessor.remove_single_output_tags=['remove_single_output']",
         r"--TagRemovePreprocessor.remove_all_outputs_tags=['remove_all_output']",
-    ], shell=True)
+    ]), shell=True)
     process.wait()
     
     markdown_path = f'content/{post}/{post}.md'
