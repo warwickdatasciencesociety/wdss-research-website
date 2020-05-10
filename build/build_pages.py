@@ -2,6 +2,7 @@
 
 import re
 import os
+import platform
 import shutil
 import subprocess
 
@@ -17,16 +18,31 @@ for post in os.listdir('content'):
     print(f"[BUILD] Converting and formatting post {post}")
 
     # convert to markdown
-    process = subprocess.Popen(' '.join([
-        'jupyter nbconvert',
-        notebook_path,
-        '--to markdown',
-        '--TagRemovePreprocessor.enabled=True',
-        r"--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
-        r"--TagRemovePreprocessor.remove_input_tags=['remove_input']",
-        r"--TagRemovePreprocessor.remove_single_output_tags=['remove_single_output']",
-        r"--TagRemovePreprocessor.remove_all_outputs_tags=['remove_all_output']",
-    ]), shell=True)
+    system = platform.system()
+    if system == 'Windows':
+        process = subprocess.Popen([
+            'jupyter nbconvert',
+            notebook_path,
+            '--to markdown',
+            '--TagRemovePreprocessor.enabled=True',
+            "--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
+            "--TagRemovePreprocessor.remove_input_tags=['remove_input']",
+            "--TagRemovePreprocessor.remove_single_output_tags=['remove_single_output']",
+            "--TagRemovePreprocessor.remove_all_outputs_tags=['remove_all_output']",
+        ], shell=True)
+    elif system == 'Linux':
+        process = subprocess.Popen(' '.join([
+            'jupyter nbconvert',
+            notebook_path,
+            '--to markdown',
+            '--TagRemovePreprocessor.enabled=True',
+            "--TagRemovePreprocessor.remove_cell_tags=\"['remove_cell']\"",
+            "--TagRemovePreprocessor.remove_input_tags=\"['remove_input']\"",
+            "--TagRemovePreprocessor.remove_single_output_tags=\"['remove_single_output']\"",
+            "--TagRemovePreprocessor.remove_all_outputs_tags=\"['remove_all_output']\"",
+        ]), shell=True)
+    else:
+        raise NotImplementedError("build does currently not support system")
     process.wait()
     
     markdown_path = f'content/{post}/{post}.md'
