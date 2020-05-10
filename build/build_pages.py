@@ -6,16 +6,14 @@ import platform
 import shutil
 import subprocess
 
-if not os.path.exists('source/'):
-    os.mkdir('source/')
+if not os.path.exists('source/_posts'):
+    os.mkdir('source/_posts')
 
 for post in os.listdir('content'):
     # check notebook exists
     notebook_path = f"content/{post}/{post}.ipynb"
     if not os.path.exists(notebook_path):
         raise RuntimeError(f"could not find notebook for post {post}")
-
-    print(f"[BUILD] Converting and formatting post {post}")
 
     # convert to markdown
     system = platform.system()
