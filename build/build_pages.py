@@ -18,9 +18,9 @@ for post in os.listdir('content'):
 
     # convert to markdown
     process = subprocess.Popen([
-        'python', '-m',
+        #'python', '-m',
         'jupyter', 'nbconvert',
-                notebook_path, '--to', 'markdown',
+        notebook_path, '--to', 'markdown',
         '--TagRemovePreprocessor.enabled=True',
         r"--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
         r"--TagRemovePreprocessor.remove_input_tags=['remove_input']",
