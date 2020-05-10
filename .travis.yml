@@ -7,7 +7,7 @@ matrix:
       cache: pip
       install:
         - pip install jupyter nbconvert
-      script:
+      before_script:
         - python build/build_pages.py
 
     - language: node_js
