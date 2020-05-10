@@ -19,9 +19,9 @@ for post in os.listdir('content'):
     system = platform.system()
     if system == 'Windows':
         process = subprocess.Popen([
-            'jupyter nbconvert',
+            'jupyter', 'nbconvert',
             notebook_path,
-            '--to markdown',
+            '--to', 'markdown',
             '--TagRemovePreprocessor.enabled=True',
             "--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
             "--TagRemovePreprocessor.remove_input_tags=['remove_input']",

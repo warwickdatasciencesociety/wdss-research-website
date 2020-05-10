@@ -14,6 +14,3 @@ public/
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Misc
-/source/_posts/
