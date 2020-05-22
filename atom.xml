@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.warwickdatascience.com/"/>
-  <updated>2020-04-19T00:00:00.000Z</updated>
+  <updated>2020-05-23T00:00:00.000Z</updated>
   <id>https://research.warwickdatascience.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Urban Cities: A History Told By Data</title>
+    <link href="https://research.warwickdatascience.com/urban-cities/"/>
+    <id>https://research.warwickdatascience.com/urban-cities/</id>
+    <published>2020-05-23T00:00:00.000Z</published>
+    <updated>2020-05-23T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Remnants of history often find themselves scattered in the modern word. With the right tools—in this case, some data-science-savvy—their stories can be brought back to life.
+    
+    </summary>
+    
+    
+      <category term="Humanities" scheme="https://research.warwickdatascience.com/categories/Humanities/"/>
+    
+      <category term="Geography" scheme="https://research.warwickdatascience.com/categories/Humanities/Geography/"/>
+    
+      <category term="History" scheme="https://research.warwickdatascience.com/categories/Humanities/History/"/>
+    
+    
+      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+    
+      <category term="data-analysis" scheme="https://research.warwickdatascience.com/tags/data-analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>What Factors Actually Affect Your Grades?</title>
