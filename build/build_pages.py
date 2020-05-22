@@ -46,7 +46,7 @@ for post in os.listdir('content'):
     markdown_path = f'content/{post}/{post}.md'
     image_dir_path = f'content/{post}/{post}_files/'
 
-    with open(markdown_path, 'r') as file:
+    with open(markdown_path, 'r', encoding='utf8') as file:
         file_data = file.read()
 
     # correct image paths
@@ -61,7 +61,7 @@ for post in os.listdir('content'):
     file_data = re.sub(r'</table>[\r\n]{1,2}</div>', '</table>', file_data)
     file_data = re.sub(r'<div>.*?</style>', '', file_data, flags=re.DOTALL)
 
-    with open(markdown_path, 'w') as file:
+    with open(markdown_path, 'w', encoding='utf8') as file:
         file.write(file_data)
 
     # move files
@@ -71,7 +71,8 @@ for post in os.listdir('content'):
         os.mkdir(target_image_dir_path)
     else:
         for image in os.listdir(target_image_dir_path):
-            os.remove(f'{target_image_dir_path}{image}')
+            if re.match(post, image):
+                os.remove(f'{target_image_dir_path}{image}')
     for image in os.listdir(image_dir_path):
         shutil.move(f'{image_dir_path}{image}', f'{target_image_dir_path}')
     os.rmdir(image_dir_path)
