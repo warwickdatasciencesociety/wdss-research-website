@@ -22,7 +22,7 @@ We are still working on getting this site set up, so source code for this post i
 {% endnote %}
 ## Introduction
 
-An aerial observer would be forgiven for mistaking Barcelona’s octagonal blocks and diagonal streets (shown above) as some red-brick reimagining of Legoland. Indeed, Spain’s 2000-year-old capital is a strict grid-like design, engineered to tackle overpopulation while maximizing airflow for its inhabitants. It’s an ancient city with all the efficiency of contemporary urban structures like New York.
+An aerial observer would be forgiven for mistaking Barcelona’s octagonal blocks and diagonal streets as some red-brick reimagining of Legoland. Indeed, Spain’s 2000-year-old capital is a strict grid-like design, engineered to tackle overpopulation while maximizing airflow for its inhabitants. It’s an ancient city with all the efficiency of contemporary urban structures like New York.
 
 Barcelona is a fascinating example, but its grid-like patterns are obvious to the human eye. I wondered about other cities with more complex features. What subtle quirks lie in the road/street structures of Bristol, Newcastle or Coventry?
 
