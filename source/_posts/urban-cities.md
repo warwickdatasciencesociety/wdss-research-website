@@ -17,10 +17,11 @@ cover: /banners/urban-cities.jpg
 ---
 {% note info %}
 **Accessing Post Source**
-
 We are still working on getting this site set up, so source code for this post is not yet available. Check back soon and you’ll be able to find it linked here.
 {% endnote %}
 ## Introduction
+
+![The skyline of Barcelona](/images/urban-cities/barcelona.jpg)
 
 An aerial observer would be forgiven for mistaking Barcelona’s octagonal blocks and diagonal streets as some red-brick reimagining of Legoland. Indeed, Spain’s 2000-year-old capital is a strict grid-like design, engineered to tackle overpopulation while maximizing airflow for its inhabitants. It’s an ancient city with all the efficiency of contemporary urban structures like New York.
 
