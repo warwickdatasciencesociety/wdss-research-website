@@ -35,11 +35,17 @@
           if (theme.post_meta.post.date_type)
             span.post-meta__separator |
 
+          i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
           each item, index in page.categories.data
-            i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
+            if (index > 0)
+              if ('parent' in item)
+                if (page.categories.data[index-1]._id === item.parent)
+                  i.fa.fa-angle-right.post-meta__separator(aria-hidden="true")
+                else
+                  span , 
+              else
+                span , 
             a(href=url_for(item.path)).post-meta__categories #[=item.name]
-            if (index < page.categories.data.length - 1)
-              i.fa.fa-angle-right.post-meta__separator(aria-hidden="true")
 
     .meta-secondline  
       - let postWordcount = theme.wordcount.enable && (theme.wordcount.post_wordcount || theme.wordcount.min2read)

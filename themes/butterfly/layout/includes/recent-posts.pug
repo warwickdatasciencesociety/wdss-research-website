@@ -46,11 +46,17 @@ each article , index in page.posts.data
         if (theme.post_meta.page.categories && article.categories.data.length > 0)
           span.article-meta
             span.article-meta__separator |
+            i.fa.fa-inbox.article-meta__icon(aria-hidden="true")
             each item, index in article.categories.data
-              i.fa.fa-inbox.article-meta__icon(aria-hidden="true")
+              if (index > 0)
+                if ('parent' in item)
+                  if (article.categories.data[index-1]._id === item.parent)
+                    i.fa.fa-angle-right(aria-hidden="true")
+                  else
+                    span , 
+                else
+                  span , 
               a(href=url_for(item.path)).article-meta__categories #[=item.name]
-              if (index < article.categories.data.length - 1)
-                  i.fa.fa-angle-right(aria-hidden="true")
         if (theme.post_meta.page.tags && article.tags.data.length > 0)
           span.article-meta.tags
             span.article-meta__separator |
