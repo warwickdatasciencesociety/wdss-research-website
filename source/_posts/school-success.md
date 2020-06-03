@@ -77,14 +77,14 @@ import statistics as stats
 import statsmodels.api as sm
 
 # Load the dataset from the csv file using pandas
-data_m = pd.read_csv(r'data\student-mat.csv', sep=';')
-data_p = pd.read_csv(r'data\student-por.csv', sep=';')
+data_m = pd.read_csv(r'data/student-mat.csv', sep=';')
+data_p = pd.read_csv(r'data/student-por.csv', sep=';')
 ```
 
 We can start by taking a look at the first few rows of each dataset.
 
     First 5 lines of the math performance dataset:
-    
+
 
 
 
@@ -313,7 +313,7 @@ We can start by taking a look at the first few rows of each dataset.
 
 
     First 5 lines of the Portuguese performance dataset:
-    
+
 
 
 
@@ -546,7 +546,7 @@ An important detail to note is that there are 395 high school students in the ma
 Now let's visualize the final grades distributions for both subjects.
 
 
-![](/images/school-success/school-success_13_0.png)
+![Distribution of student grades for math and Portuguese](/images/school-success/school-success_13_0.png)
 
 
 
@@ -561,7 +561,7 @@ We can also calculate that the average final grades for math and Portuguese stud
 We are now going to automatically find the variables with the strongest correlation to the final grades for both datasets. Finding correlations between non-numeric features and the outcome can get a bit messy, so we will focus on testing only the existing numerical values of the datasets at first. To better visualize the insights, we will also use correlation bar plots and heat maps for both datasets.
 
 
-![](/images/school-success/school-success_17_0.png)
+![Correlations between numeric predictors and the response for math](/images/school-success/school-success_17_0.png)
 
 
 To interpret correlation bar plots and heat map:
@@ -569,7 +569,7 @@ To interpret correlation bar plots and heat map:
 - Brown represents negative correlations, whereas purple represents positive correlations. 
 
 
-![](/images/school-success/school-success_19_0.png)
+![Correlations between numeric predictors and the response for Portuguese](/images/school-success/school-success_19_0.png)
 
 
 Insights:
@@ -617,11 +617,11 @@ dummy_dfp = one_hot_encode(data_p)
 We can now analyze the correlation coefficients for the final grades of all the variables for both datasets.
 
 
-![](/images/school-success/school-success_28_0.png)
+![Correlations between categorical predictors and the response for math](/images/school-success/school-success_28_0.png)
 
 
 
-![](/images/school-success/school-success_29_0.png)
+![Correlations between categorical predictors and the response for Portuguese](/images/school-success/school-success_29_0.png)
 
 
 Insights:
@@ -637,7 +637,7 @@ Some of the results are quite unexpected so let's visualize them.
 ### Effect of Address Type on Grades
 
 
-![](/images/school-success/school-success_34_0.png)
+![Impact of address type on student performance](/images/school-success/school-success_34_0.png)
 
 
 Insights: 
@@ -647,7 +647,7 @@ Insights:
 ### Effect of Relationship Status on Grades
 
 
-![](/images/school-success/school-success_37_0.png)
+![Impact of relationship status on student performance](/images/school-success/school-success_37_0.png)
 
 
 
@@ -681,7 +681,7 @@ sex_plot(data_p, axs[1], subject='Portuguese')
 ```
 
 
-![](/images/school-success/school-success_41_0.png)
+![Impact of sex on student performance](/images/school-success/school-success_41_0.png)
 
 
 ### Effect of School Choice on Grades
@@ -697,7 +697,7 @@ b.set_ylabel('Final Grade');
 ```
 
 
-![](/images/school-success/school-success_43_0.png)
+![Impact of school choice on student performance](/images/school-success/school-success_43_0.png)
 
 
 Insights: 
@@ -739,7 +739,7 @@ display(coeffs_m)
 ```
 
     Model R^2: 0.20
-    
+
 
 
 
@@ -894,7 +894,7 @@ display(coeffs_p)
 ```
 
     Model R^2: 0.305
-    
+
 
 
 

@@ -17,12 +17,11 @@ cover: /banners/urban-cities.jpg
 ---
 {% note info %}
 **Accessing Post Source**
+
 We are still working on getting this site set up, so source code for this post is not yet available. Check back soon and you’ll be able to find it linked here.
 {% endnote %}
 ## Introduction
-
 ![The skyline of Barcelona](/images/urban-cities/barcelona.jpg)
-
 An aerial observer would be forgiven for mistaking Barcelona’s octagonal blocks and diagonal streets as some red-brick reimagining of Legoland. Indeed, Spain’s 2000-year-old capital is a strict grid-like design, engineered to tackle overpopulation while maximizing airflow for its inhabitants. It’s an ancient city with all the efficiency of contemporary urban structures like New York.
 
 Barcelona is a fascinating example, but its grid-like patterns are obvious to the human eye. I wondered about other cities with more complex features. What subtle quirks lie in the road/street structures of Bristol, Newcastle or Coventry?
@@ -173,15 +172,16 @@ For each of these 12 cities, the returned bearings were weighted by street lengt
 ### Birmingham
 
 
-![](/images/urban-cities/urban-cities_10_0.png)
+![](/images/urban-cities/urban-cities_11_0.png)
 
 
 Birmingham’s visualization is unmistakably circular. Many older cities lack a grid structure, with impromptu-built streets going off in many different directions. The place now called “Birmingham” has been around for more than 1,400 years. It was believed to have been established by a Saxon tribe, before expanding over the centuries into the city of 8500 streets we know today.
+
 ![William Westley's 1732 Prospect of Birmingham](/images/urban-cities/prospect_of_birmingham.jpg)
 ### Manchester & Newcastle
 
 
-![](/images/urban-cities/urban-cities_14_0.png)
+![](/images/urban-cities/urban-cities_15_0.png)
 
 
 Manchester displays quite a clear cross-like visualization. This city has an interesting grid structure with a strong emphasis on moving north-to-south. The east-to-west flow is perhaps due to Manchester sitting almost directly between Liverpool and Sheffield, and the reduced SE/NW activity might result from its position just in the upper left of the Peak District.
@@ -191,7 +191,7 @@ Newcastle is similar but for a more obvious reason; its central ring-road system
 ### Coventry
 
 
-![](/images/urban-cities/urban-cities_17_0.png)
+![](/images/urban-cities/urban-cities_18_0.png)
 
 
 Not unlike Manchester, Coventry’s visualization hints at a grid-like design. Famously, this ancient city—once a hotspot of trade for cloth and textiles—was obliterated in 1940 by a series of bombing raids, now called the Coventry Blitz. In the decades following, the city’s remains were rebuilt into a modern grid structure.
@@ -199,7 +199,7 @@ Not unlike Manchester, Coventry’s visualization hints at a grid-like design. F
 ### Bristol
 
 
-![](/images/urban-cities/urban-cities_20_0.png)
+![](/images/urban-cities/urban-cities_21_0.png)
 
 
 For a city founded on the turn of the second-last millennia, we wouldn’t expect to see much beyond a uniformly distributed set of bearings. Yet Bristol’s otherwise almost-circular plot is cut along the NE/SW line. Modern Bristol is dominated by the M5, as well as the River Avon. It’s interesting that a 1960s motorway construction can have such an impact on the bearings of an ancient city.
@@ -209,7 +209,7 @@ For a city founded on the turn of the second-last millennia, we wouldn’t expec
 As well as analyzing the street orientations of individual cities, it is beneficial to to showcase their visualizations side-by-side to draw comparisons and appreciate relative differences. To extend, I have collated the visualizations for the twelve cities I considered into one final image.
 
 
-![](/images/urban-cities/urban-cities_24_0.png)
+![](/images/urban-cities/urban-cities_25_0.png)
 
 
 ### The Importance of Data Science
