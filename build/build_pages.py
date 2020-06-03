@@ -21,7 +21,7 @@ for post in os.listdir('content'):
         process = subprocess.Popen([
             'jupyter', 'nbconvert',
             notebook_path,
-            '--to', 'markdown',
+            '--to', 'markdown', '--template=build/markdown_with_captions.tpl',
             '--TagRemovePreprocessor.enabled=True',
             "--TagRemovePreprocessor.remove_cell_tags=['remove_cell']",
             "--TagRemovePreprocessor.remove_input_tags=['remove_input']",
@@ -33,6 +33,7 @@ for post in os.listdir('content'):
             'jupyter nbconvert',
             notebook_path,
             '--to markdown',
+            '--template=build/markdown_with_captions.tpl',
             '--TagRemovePreprocessor.enabled=True',
             "--TagRemovePreprocessor.remove_cell_tags=\"['remove_cell']\"",
             "--TagRemovePreprocessor.remove_input_tags=\"['remove_input']\"",
@@ -53,7 +54,7 @@ for post in os.listdir('content'):
     file_data = re.sub(f'{post}_files/', f'/images/{post}/', file_data)
 
     # remove captions
-    file_data = re.sub(r'!\[\w+\]', '![]', file_data)
+    # file_data = re.sub(r'!\[\w+\]', '![]', file_data)
 
     # remove additional table formatting
     file_data = re.sub('table border="1" class="dataframe"', 'table', file_data)
