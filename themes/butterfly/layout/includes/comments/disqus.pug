@@ -3,7 +3,7 @@ script.
   var disqus_config = function () {
     this.page.url = '!{ page.permalink }';
     this.page.identifier = '!{ page.path }';
-    this.page.title = '!{ page.title }';
+    this.page.title = "{ page.title }";
   };
   (function() { 
     var d = document, s = d.createElement('script');
