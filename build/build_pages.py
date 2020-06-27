@@ -11,6 +11,8 @@ if not os.path.exists('source/_posts'):
 
 for post in os.listdir('content'):
     # check notebook exists
+    if post == '.ipynb_checkpoints':
+        continue
     notebook_path = f"content/{post}/{post}.ipynb"
     if not os.path.exists(notebook_path):
         raise RuntimeError(f"could not find notebook for post {post}")
