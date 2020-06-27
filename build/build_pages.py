@@ -69,13 +69,14 @@ for post in os.listdir('content'):
 
     # move files
     shutil.move(markdown_path, f'source/_posts/{post}.md')
-    target_image_dir_path = f'source/images/{post}/'
-    if not os.path.exists(target_image_dir_path):
-        os.mkdir(target_image_dir_path)
-    else:
-        for image in os.listdir(target_image_dir_path):
-            if re.match(post, image):
-                os.remove(f'{target_image_dir_path}{image}')
-    for image in os.listdir(image_dir_path):
-        shutil.move(f'{image_dir_path}{image}', f'{target_image_dir_path}')
-    os.rmdir(image_dir_path)
+    if os.path.exists(image_dir_path):
+        target_image_dir_path = f'source/images/{post}/'
+        if not os.path.exists(target_image_dir_path):
+            os.mkdir(target_image_dir_path)
+        else:
+            for image in os.listdir(target_image_dir_path):
+                if re.match(post, image):
+                    os.remove(f'{target_image_dir_path}{image}')
+        for image in os.listdir(image_dir_path):
+            shutil.move(f'{image_dir_path}{image}', f'{target_image_dir_path}')
+        os.rmdir(image_dir_path)
