@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.warwickdatascience.com/"/>
-  <updated>2020-05-23T00:00:00.000Z</updated>
+  <updated>2020-06-27T00:00:00.000Z</updated>
   <id>https://research.warwickdatascience.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Higher or Lower: Reinventing a Classic Card Game</title>
+    <link href="https://research.warwickdatascience.com/higher-or-lower/"/>
+    <id>https://research.warwickdatascience.com/higher-or-lower/</id>
+    <published>2020-06-27T00:00:00.000Z</published>
+    <updated>2020-06-27T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      How well do you know your celebs? This post discusses a web app developed collaboratively with WDSS members to test just this. Have a play and then learn how it was made.
+    
+    </summary>
+    
+    
+      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+    
+      <category term="Web" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Web/"/>
+    
+    
+      <category term="shiny" scheme="https://research.warwickdatascience.com/tags/shiny/"/>
+    
+      <category term="web-scraping" scheme="https://research.warwickdatascience.com/tags/web-scraping/"/>
+    
+      <category term="game" scheme="https://research.warwickdatascience.com/tags/game/"/>
+    
+  </entry>
   
   <entry>
     <title>Urban Cities: A History Told By Data</title>
