@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.warwickdatascience.com/"/>
-  <updated>2020-06-27T00:00:00.000Z</updated>
+  <updated>2020-07-05T00:00:00.000Z</updated>
   <id>https://research.warwickdatascience.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word2Vec: Arithmetic with Words</title>
+    <link href="https://research.warwickdatascience.com/word2vec/"/>
+    <id>https://research.warwickdatascience.com/word2vec/</id>
+    <published>2020-07-05T00:00:00.000Z</published>
+    <updated>2020-07-05T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      From a young age we build familarity with the rules for adding and subtracting numbers to and from one another, but how could we go about performing arithmetic with words?
+    
+    </summary>
+    
+    
+      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+    
+      <category term="Natural Language Processing" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Natural-Language-Processing/"/>
+    
+    
+      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+    
+      <category term="word-embedding" scheme="https://research.warwickdatascience.com/tags/word-embedding/"/>
+    
+  </entry>
   
   <entry>
     <title>Higher or Lower: Reinventing a Classic Card Game</title>
