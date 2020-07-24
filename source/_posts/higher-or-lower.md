@@ -25,7 +25,7 @@ Sometimes, simplicity is beautiful. Higher or Lower is a game embodying this phi
 
 For our purposes, this project is an ideal medium to practise web scraping and creating sharable products for others to enjoy. Web scraping is a way of extracting data from websites, leveraging automation to gather information efficiently and without unnecessary repetition.  In all, three members of WDSS worked on this project, combining their specific skills to develop the final product. [Tim Hargreaves](https://www.linkedin.com/in/tim-hargreaves/), focused on the backbone of the app, [Matthew Bardsley](https://www.linkedin.com/in/mhbardsley/), the visuals of the game, and I ([Parth Devalia](https://www.linkedin.com/in/parthdevalia/)) have responsibility for the communication of results.
 
-## Implemenation
+## Implementation
 {% note info %}
 The source code for the web app and scraping scripts have been open-sourced in [this repository](https://github.com/warwickdatascience/higher-or-lower).
 {% endnote %}
