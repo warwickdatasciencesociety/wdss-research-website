@@ -12,7 +12,7 @@ categories:
 - [Computer Science, Web]
 languages:
 - R
-description: ""
+description: "As universities wrangle over the top spots on the league table, it can be hard to spot the overall trends over the years. To help with the WDSS have developed a web app to visualise such patterns."
 cover: /banners/league-of-its-own.jpg
 ---
 {% note info %}
