@@ -1,0 +1,35 @@
+states.json:
+	- source: https://github.com/evangambit/JsonOfCounties
+	- accessed: 2020-06-26
+	- preprocessing: None
+	- description: County-level data on a variety of demographic and socio-economic measures
+	- variables used:
+		- race demographics
+		- age demographics
+		- sex demographics
+		- unemployment rate
+		- average income
+		- poverty rate
+economy_data.csv:
+	- source: https://www.kaggle.com/muonneutrino/us-census-demographic-data
+	- accessed: 2020-07-09
+	- preprocessing: None
+	- description: County-level census data
+	- variables used:
+		- poverty levels
+		- industry types
+education_data.csv:
+	- source: 
+	- accessed: 2020-07-09
+	- preprocessing: None
+	- description: County-level census data
+	- variables used:
+		- population density
+		- education levels
+religion.csv:
+	- source: http://www.thearda.com/Archive/Files/Descriptions/RCMSCY10.asp
+	- accessed: 2020-07-18
+	- preprocessing: Converted from SPSS SAV file to CSV
+	- description: County-level data on demography of religions
+	- variables used:
+		- religion adherence rates
