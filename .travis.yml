@@ -14,4 +14,4 @@ deploy:
   on:
     branch: master
   local-dir: public
-  fqdn: research.warwickdatascience.com
+  fqdn: research.wdss.io
