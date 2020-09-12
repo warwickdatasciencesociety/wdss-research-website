@@ -44,33 +44,6 @@
   </entry>
   
   <entry>
-    <title>Quantifying Anonymity: The Science of Staying Private</title>
-    <link href="https://research.wdss.io/unicity/"/>
-    <id>https://research.wdss.io/unicity/</id>
-    <published>2020-09-12T00:00:00.000Z</published>
-    <updated>2020-09-12T00:00:00.000Z</updated>
-    
-    <summary type="html">
-    
-      In a world where information is everywhere and privacy is paramount, how can we leverage data science to improve and measure the privacy of our personal data?
-    
-    </summary>
-    
-    
-      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
-    
-      <category term="Cyber Security" scheme="https://research.wdss.io/categories/Computer-Science/Cyber-Security/"/>
-    
-    
-      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
-    
-      <category term="ethics" scheme="https://research.wdss.io/tags/ethics/"/>
-    
-      <category term="geospatial" scheme="https://research.wdss.io/tags/geospatial/"/>
-    
-  </entry>
-  
-  <entry>
     <title>The Trump Effect: Can Data Explain What We Never Saw Coming?</title>
     <link href="https://research.wdss.io/trump-effect/"/>
     <id>https://research.wdss.io/trump-effect/</id>
