@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.warwickdatascience.com/"/>
-  <updated>2020-08-14T00:00:00.000Z</updated>
+  <updated>2020-09-12T00:00:00.000Z</updated>
   <id>https://research.warwickdatascience.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Quantifying Anonymity: The Science of Staying Private</title>
+    <link href="https://research.warwickdatascience.com/unicity/"/>
+    <id>https://research.warwickdatascience.com/unicity/</id>
+    <published>2020-09-12T00:00:00.000Z</published>
+    <updated>2020-09-12T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Everyone has their theories on what led to Trump&#39;s surprise victory in the 2016 presidential election, but what does data science have to say on the matter?
+    
+    </summary>
+    
+    
+      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+    
+      <category term="Cyber Security" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Cyber-Security/"/>
+    
+    
+      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+    
+      <category term="ethics" scheme="https://research.warwickdatascience.com/tags/ethics/"/>
+    
+      <category term="geospatial" scheme="https://research.warwickdatascience.com/tags/geospatial/"/>
+    
+  </entry>
   
   <entry>
     <title>The Trump Effect: Can Data Explain What We Never Saw Coming?</title>
