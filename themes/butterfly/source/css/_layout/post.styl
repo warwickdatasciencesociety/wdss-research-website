@@ -69,7 +69,7 @@
       padding: 0 0 0 .8rem
       list-style: none
       counter-reset: li
-
+      
       p
         margin: 0 0 .5rem
 
@@ -107,6 +107,12 @@
           text-align: center
           font-size: .6rem
           line-height: h
+          
+    // Temporary solution
+    ol[start="2"]
+      counter-reset: li 1
+    ol[start="3"]
+      counter-reset: li 2
 
     ul
       > li
@@ -127,6 +133,7 @@
           background: transparent
           content: ''
           line-height: h
+
   else
     ol,
     ul
