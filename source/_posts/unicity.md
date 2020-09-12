@@ -12,7 +12,7 @@ categories:
 - [Computer Science, Cyber Security]
 languages:
 - python
-description: "Everyone has their theories on what led to Trump's surprise victory in the 2016 presidential election, but what does data science have to say on the matter?"
+description: "In a world where information is everywhere and privacy is paramount, how can we leverage data science to improve and measure the privacy of our personal data?"
 cover: /banners/unicity.jpg
 ---
 
