@@ -5,9 +5,9 @@
   <subtitle>Delivering insight powered by data</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://research.warwickdatascience.com/"/>
+  <link href="https://research.wdss.io/"/>
   <updated>2020-09-12T00:00:00.000Z</updated>
-  <id>https://research.warwickdatascience.com/</id>
+  <id>https://research.wdss.io/</id>
   
   <author>
     <name>Warwick Data Science</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Quantifying Anonymity: The Science of Staying Private</title>
-    <link href="https://research.warwickdatascience.com/unicity/"/>
-    <id>https://research.warwickdatascience.com/unicity/</id>
+    <link href="https://research.wdss.io/unicity/"/>
+    <id>https://research.wdss.io/unicity/</id>
     <published>2020-09-12T00:00:00.000Z</published>
     <updated>2020-09-12T00:00:00.000Z</updated>
     
@@ -30,23 +30,23 @@
     </summary>
     
     
-      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
     
-      <category term="Cyber Security" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Cyber-Security/"/>
+      <category term="Cyber Security" scheme="https://research.wdss.io/categories/Computer-Science/Cyber-Security/"/>
     
     
-      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
     
-      <category term="ethics" scheme="https://research.warwickdatascience.com/tags/ethics/"/>
+      <category term="ethics" scheme="https://research.wdss.io/tags/ethics/"/>
     
-      <category term="geospatial" scheme="https://research.warwickdatascience.com/tags/geospatial/"/>
+      <category term="geospatial" scheme="https://research.wdss.io/tags/geospatial/"/>
     
   </entry>
   
   <entry>
     <title>The Trump Effect: Can Data Explain What We Never Saw Coming?</title>
-    <link href="https://research.warwickdatascience.com/trump-effect/"/>
-    <id>https://research.warwickdatascience.com/trump-effect/</id>
+    <link href="https://research.wdss.io/trump-effect/"/>
+    <id>https://research.wdss.io/trump-effect/</id>
     <published>2020-08-14T00:00:00.000Z</published>
     <updated>2020-08-14T00:00:00.000Z</updated>
     
@@ -57,23 +57,23 @@
     </summary>
     
     
-      <category term="Social Sciences" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/"/>
+      <category term="Social Sciences" scheme="https://research.wdss.io/categories/Social-Sciences/"/>
     
-      <category term="Politics" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/Politics/"/>
+      <category term="Politics" scheme="https://research.wdss.io/categories/Social-Sciences/Politics/"/>
     
     
-      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
-      <category term="data-analysis" scheme="https://research.warwickdatascience.com/tags/data-analysis/"/>
+      <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
     
-      <category term="regression" scheme="https://research.warwickdatascience.com/tags/regression/"/>
+      <category term="regression" scheme="https://research.wdss.io/tags/regression/"/>
     
   </entry>
   
   <entry>
     <title>A League of Its Own: Rethinking University League Tables</title>
-    <link href="https://research.warwickdatascience.com/league-of-its-own/"/>
-    <id>https://research.warwickdatascience.com/league-of-its-own/</id>
+    <link href="https://research.wdss.io/league-of-its-own/"/>
+    <id>https://research.wdss.io/league-of-its-own/</id>
     <published>2020-07-25T00:00:00.000Z</published>
     <updated>2020-07-25T00:00:00.000Z</updated>
     
@@ -84,23 +84,23 @@
     </summary>
     
     
-      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
     
-      <category term="Web" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Web/"/>
+      <category term="Web" scheme="https://research.wdss.io/categories/Computer-Science/Web/"/>
     
     
-      <category term="shiny" scheme="https://research.warwickdatascience.com/tags/shiny/"/>
+      <category term="shiny" scheme="https://research.wdss.io/tags/shiny/"/>
     
-      <category term="web-scraping" scheme="https://research.warwickdatascience.com/tags/web-scraping/"/>
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
     
-      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
   </entry>
   
   <entry>
     <title>Money for Nothing: An Arbitrage Paradox</title>
-    <link href="https://research.warwickdatascience.com/money-for-nothing/"/>
-    <id>https://research.warwickdatascience.com/money-for-nothing/</id>
+    <link href="https://research.wdss.io/money-for-nothing/"/>
+    <id>https://research.wdss.io/money-for-nothing/</id>
     <published>2020-07-23T00:00:00.000Z</published>
     <updated>2020-07-23T00:00:00.000Z</updated>
     
@@ -111,21 +111,21 @@
     </summary>
     
     
-      <category term="Economics" scheme="https://research.warwickdatascience.com/categories/Economics/"/>
+      <category term="Economics" scheme="https://research.wdss.io/categories/Economics/"/>
     
-      <category term="Finance" scheme="https://research.warwickdatascience.com/categories/Economics/Finance/"/>
+      <category term="Finance" scheme="https://research.wdss.io/categories/Economics/Finance/"/>
     
     
-      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
     
-      <category term="puzzle" scheme="https://research.warwickdatascience.com/tags/puzzle/"/>
+      <category term="puzzle" scheme="https://research.wdss.io/tags/puzzle/"/>
     
   </entry>
   
   <entry>
     <title>Word2Vec: Arithmetic with Words</title>
-    <link href="https://research.warwickdatascience.com/word2vec/"/>
-    <id>https://research.warwickdatascience.com/word2vec/</id>
+    <link href="https://research.wdss.io/word2vec/"/>
+    <id>https://research.wdss.io/word2vec/</id>
     <published>2020-07-05T00:00:00.000Z</published>
     <updated>2020-07-05T00:00:00.000Z</updated>
     
@@ -136,21 +136,21 @@
     </summary>
     
     
-      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
     
-      <category term="Natural Language Processing" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Natural-Language-Processing/"/>
+      <category term="Natural Language Processing" scheme="https://research.wdss.io/categories/Computer-Science/Natural-Language-Processing/"/>
     
     
-      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
     
-      <category term="word-embedding" scheme="https://research.warwickdatascience.com/tags/word-embedding/"/>
+      <category term="word-embedding" scheme="https://research.wdss.io/tags/word-embedding/"/>
     
   </entry>
   
   <entry>
     <title>Higher or Lower: Reinventing a Classic Card Game</title>
-    <link href="https://research.warwickdatascience.com/higher-or-lower/"/>
-    <id>https://research.warwickdatascience.com/higher-or-lower/</id>
+    <link href="https://research.wdss.io/higher-or-lower/"/>
+    <id>https://research.wdss.io/higher-or-lower/</id>
     <published>2020-06-27T00:00:00.000Z</published>
     <updated>2020-06-27T00:00:00.000Z</updated>
     
@@ -161,23 +161,23 @@
     </summary>
     
     
-      <category term="Computer Science" scheme="https://research.warwickdatascience.com/categories/Computer-Science/"/>
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
     
-      <category term="Web" scheme="https://research.warwickdatascience.com/categories/Computer-Science/Web/"/>
+      <category term="Web" scheme="https://research.wdss.io/categories/Computer-Science/Web/"/>
     
     
-      <category term="shiny" scheme="https://research.warwickdatascience.com/tags/shiny/"/>
+      <category term="shiny" scheme="https://research.wdss.io/tags/shiny/"/>
     
-      <category term="web-scraping" scheme="https://research.warwickdatascience.com/tags/web-scraping/"/>
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
     
-      <category term="game" scheme="https://research.warwickdatascience.com/tags/game/"/>
+      <category term="game" scheme="https://research.wdss.io/tags/game/"/>
     
   </entry>
   
   <entry>
     <title>Urban Cities: A History Told By Data</title>
-    <link href="https://research.warwickdatascience.com/urban-cities/"/>
-    <id>https://research.warwickdatascience.com/urban-cities/</id>
+    <link href="https://research.wdss.io/urban-cities/"/>
+    <id>https://research.wdss.io/urban-cities/</id>
     <published>2020-05-23T00:00:00.000Z</published>
     <updated>2020-05-23T00:00:00.000Z</updated>
     
@@ -188,23 +188,23 @@
     </summary>
     
     
-      <category term="Humanities" scheme="https://research.warwickdatascience.com/categories/Humanities/"/>
+      <category term="Humanities" scheme="https://research.wdss.io/categories/Humanities/"/>
     
-      <category term="Geography" scheme="https://research.warwickdatascience.com/categories/Humanities/Geography/"/>
+      <category term="Geography" scheme="https://research.wdss.io/categories/Humanities/Geography/"/>
     
-      <category term="History" scheme="https://research.warwickdatascience.com/categories/Humanities/History/"/>
+      <category term="History" scheme="https://research.wdss.io/categories/Humanities/History/"/>
     
     
-      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
-      <category term="data-analysis" scheme="https://research.warwickdatascience.com/tags/data-analysis/"/>
+      <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
     
   </entry>
   
   <entry>
     <title>What Factors Actually Affect Your Grades?</title>
-    <link href="https://research.warwickdatascience.com/school-success/"/>
-    <id>https://research.warwickdatascience.com/school-success/</id>
+    <link href="https://research.wdss.io/school-success/"/>
+    <id>https://research.wdss.io/school-success/</id>
     <published>2020-04-19T00:00:00.000Z</published>
     <updated>2020-04-19T00:00:00.000Z</updated>
     
@@ -215,23 +215,23 @@
     </summary>
     
     
-      <category term="Social Sciences" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/"/>
+      <category term="Social Sciences" scheme="https://research.wdss.io/categories/Social-Sciences/"/>
     
-      <category term="Education" scheme="https://research.warwickdatascience.com/categories/Social-Sciences/Education/"/>
+      <category term="Education" scheme="https://research.wdss.io/categories/Social-Sciences/Education/"/>
     
     
-      <category term="visualization" scheme="https://research.warwickdatascience.com/tags/visualization/"/>
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
-      <category term="data-analysis" scheme="https://research.warwickdatascience.com/tags/data-analysis/"/>
+      <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
     
-      <category term="regression" scheme="https://research.warwickdatascience.com/tags/regression/"/>
+      <category term="regression" scheme="https://research.wdss.io/tags/regression/"/>
     
   </entry>
   
   <entry>
     <title>Gibrat&#39;s Law: The Central Limit Theorem&#39;s Forgotten Twin</title>
-    <link href="https://research.warwickdatascience.com/gibrats-law/"/>
-    <id>https://research.warwickdatascience.com/gibrats-law/</id>
+    <link href="https://research.wdss.io/gibrats-law/"/>
+    <id>https://research.wdss.io/gibrats-law/</id>
     <published>2020-04-10T00:00:00.000Z</published>
     <updated>2020-05-08T00:00:00.000Z</updated>
     
@@ -242,16 +242,16 @@
     </summary>
     
     
-      <category term="Meta" scheme="https://research.warwickdatascience.com/categories/Meta/"/>
+      <category term="Meta" scheme="https://research.wdss.io/categories/Meta/"/>
     
-      <category term="Mathematics" scheme="https://research.warwickdatascience.com/categories/Mathematics/"/>
+      <category term="Mathematics" scheme="https://research.wdss.io/categories/Mathematics/"/>
     
-      <category term="Statistics" scheme="https://research.warwickdatascience.com/categories/Mathematics/Statistics/"/>
+      <category term="Statistics" scheme="https://research.wdss.io/categories/Mathematics/Statistics/"/>
     
     
-      <category term="lesson" scheme="https://research.warwickdatascience.com/tags/lesson/"/>
+      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
     
-      <category term="normal-distribution" scheme="https://research.warwickdatascience.com/tags/normal-distribution/"/>
+      <category term="normal-distribution" scheme="https://research.wdss.io/tags/normal-distribution/"/>
     
   </entry>
   
