@@ -141,7 +141,7 @@ We can then visualise the simulated distributions.
 Visualisation code is not included in this post for simplicity but can be found in the post source.
 {% endnote %}
 
-![](/images/horsing-around/horsing-around_19_0.png)
+![](/images/horsing-around/horsing-around_20_0.png)
 
 
 These visualisations illustrate how, as the number of simulated moves increases, the approximation of the stationary distribution converges.
@@ -162,7 +162,7 @@ $$ P_{(i,j)} = \mathbb{P}(X_{n+1} = j |X_n = i)$$
 
 For the Markov chain representing a knight moving randomly on a chessboard, the corresponding transition matrix will be a $64 \times 64$ matrix. We will then flatten out our $8\times 8$ state space into a 64-dimensional vector by running through each row sequentially.
 {% note info %}
-For example, the 11th column of $P$ will correspond to the the square $(2, 3)$ ($(2 \times 8) + 3 = 11$)
+For example, the 11th column of $P$ will correspond to the the square $(2, 3)$ since $(2 \times 8) + 3 = 11$. In general, the $(i, j)$th square corresponds to row/column $8i+j$.
 {% endnote %}
 Transition matrices have the useful property that the $(i, j)$th entry of the matrix $P^n$ gives the probability that the Markov chain, starting in state $i$, will be in state $j$ after $n$ steps.
 
@@ -213,7 +213,7 @@ As before, we can visualise the result.
 
 
 
-![](/images/horsing-around/horsing-around_26_0.png)
+![](/images/horsing-around/horsing-around_27_0.png)
 
 
 This is exactly what we would hope to see! The stationary distribution found using the transition matrix matches the stationary distribution found by simulations, verifying the result. 
