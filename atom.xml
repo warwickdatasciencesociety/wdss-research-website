@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2020-09-12T00:00:00.000Z</updated>
+  <updated>2020-11-29T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Horsing Around: Problem-Solving Using Monte Carlo Markov Chains</title>
+    <link href="https://research.wdss.io/horsing-around/"/>
+    <id>https://research.wdss.io/horsing-around/</id>
+    <published>2020-11-29T00:00:00.000Z</published>
+    <updated>2020-11-29T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      What can you do when the mathematical solution to a problem is becoming to complex? Use simulation. Learn more about the application of simulation to a chess-based puzzle in this post.
+    
+    </summary>
+    
+    
+      <category term="Mathematics" scheme="https://research.wdss.io/categories/Mathematics/"/>
+    
+      <category term="Statistics" scheme="https://research.wdss.io/categories/Mathematics/Statistics/"/>
+    
+    
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
+      <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
+    
+      <category term="monte-carlo" scheme="https://research.wdss.io/tags/monte-carlo/"/>
+    
+  </entry>
   
   <entry>
     <title>Quantifying Anonymity: The Science of Staying Private</title>
