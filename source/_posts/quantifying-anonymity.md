@@ -216,7 +216,7 @@ We can use the `unicity` module to compute the unicity of our cleaned dataset at
 Calculating unicity values for the dataset with $p$ values between 1 and 10 gave us the following results:
 
 
-![](/images/unicity/unicity_16_0.png)
+![](/images/quantifying-anonymity/quantifying-anonymity_16_0.png)
 
 {% note info %}
 For values of $p \geq 5$, a representative sample of 100,000 subtrajectories was taken to calculate unicity, as computing all possible subtrajectories would have taken weeks to complete.
@@ -242,7 +242,7 @@ Our dataset carries spatio-temporal information about users, so we can adjust th
 Comparing unicity over $p$ with temporal resolutions of 60 minutes, 120 minutes, 180 minutes and 240 minutes, we find the following results:
 
 
-![](/images/unicity/unicity_19_0.png)
+![](/images/quantifying-anonymity/quantifying-anonymity_19_0.png)
 
 {% note info %}
 For temporal resolutions of 180 and 240 minutes, some unicity values are not defined. This is because the maximum trajectory lengths over the 24-hour period at these resolutions are 8 and 6 points respectively.
