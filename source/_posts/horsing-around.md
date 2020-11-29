@@ -221,7 +221,7 @@ This is exactly what we would hope to see! The stationary distribution found usi
 **Going Beyond**
 We can actually further improve our approach by quite a substantial amount. To do this, we diagonalise $P$ as $Q^{-1}DQ$ so we can quickly compute $P^n = Q^{-1}D^nQ$. This is not a general approach is it relies on $P$ being diagonalisable, although we can confirm that this applies in this case using `sympy` or just by giving diagonalisation a go.
 {% endnote %}
-# **Conclusion**
+## Conclusion
 
 The applications of Markov chain Monte-Carlo are wide, varied, and ever-growing. I think the following quote encapsulates this idea nicely.
 
