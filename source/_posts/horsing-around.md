@@ -2,7 +2,7 @@
 title: "Horsing Around: Problem-Solving Using Monte Carlo Markov Chains"
 date: 2020-11-29
 updated: 2020-11-29
-author: "Tom Wetherall"
+author: "Tom Wetherell"
 contact: "https://www.linkedin.com/in/tomas-wetherell-3729671a4/"
 tags:
 - simulation
