@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2020-11-29T00:00:00.000Z</updated>
+  <updated>2021-01-04T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Data-Driven Dive into UK Party Conference Leaders&#39; Speeches</title>
+    <link href="https://research.wdss.io/leaders-speeches/"/>
+    <id>https://research.wdss.io/leaders-speeches/</id>
+    <published>2021-01-04T00:00:00.000Z</published>
+    <updated>2021-01-04T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Wordclouds, sentiment, and scrabble scores. In this post, we analyse and visualisation a collection Leaders&#39; speeches, using traditional and not-so-traditional text analysis techniques.
+    
+    </summary>
+    
+    
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
+    
+      <category term="Natural Language Processing" scheme="https://research.wdss.io/categories/Computer-Science/Natural-Language-Processing/"/>
+    
+    
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
+    
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
+      <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>Horsing Around: Problem-Solving Using Monte Carlo Markov Chains</title>
