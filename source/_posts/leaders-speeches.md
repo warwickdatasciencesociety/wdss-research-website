@@ -161,7 +161,7 @@ Zipf's law is largely accurate for many natural languages, including English (th
 We can attempt to visualise this law for our own text by plotting rank on the x-axis and term frequency on the y-axis, both on log scales.
 {% note info %}
 **Why the logs?**
-By definition, if two values $x$ and $y$ are inversely proportional, then we can find a constant $a$ such that $y = \frac{a}{x}$. Taking logarithms and rearranging gives $\log(y) = log(a) - log(x)$. In other words, $x$ and $y$ are inversely proportional if and only if there logarithms lie on a straight line with a negative slope.
+By definition, if two values $x$ and $y$ are inversely proportional, then we can find a constant $a$ such that $y = \frac{a}{x}$. Taking logarithms and rearranging gives $\log(y) = log(a) - log(x)$. In other words, $x$ and $y$ are inversely proportional if and only if their logarithms lie on a straight line with a negative slope.
 {% endnote %}
 
 ![](/images/leaders-speeches/leaders-speeches_41_0.png)
@@ -254,7 +254,7 @@ Theresa May managed an incredible score of 37 in 2018 with 'Czechoslovakia' but 
 
 As we can see, the Conservatives, who have been in power since 2010 would not win a single year should it be decided by Scrabble. In fact, the Liberal Democrats would win 6 out of the 9 years we have studied with Labour, under Jeremy Corbyn, taking the other 3 years—I'm sure both parties would be happy with that in hindsight!
 
-Just in case anyone was under any illusion, of course mean Scrabble score is a poor way of deciding elections and I am not endorsing its use—at the very a game of Pictionary or would be more appropriate...
+Just in case anyone was under any illusion, of course mean Scrabble score is a poor way of deciding elections and I am not endorsing its use—at the very least, a game of Pictionary would be more appropriate...
 
 ## Takeaways
 
