@@ -24,35 +24,35 @@ As the 19th Century drew to a close, King Oscar II of Sweden set out a challenge
 
 This problem was mathematical in nature, asking how a system of planetary bodies would evolve with time according to Newton's laws of gravitation and motion. That is, can you predict where a planet will be in the future with precision using physics alone?
 
-The problem sounds simple enough. With complete understanding of the laws of motion that the planets obey, it was just a matter of extrapolating forwards in time. As such, it wasn't long before a proof, by esteemed the mathematician Henri Poincaré, was published.
+The problem sounds simple enough. With a complete understanding of the laws of motion that planets obey, it was just a matter of extrapolating forwards in time. As such, it wasn't long before a proof, by the esteemed mathematician Henri Poincaré, was published.
 
-Sadly, it wasn't much longer after that before a fatal mistake in his proof was found. And the heartbreak doesn't end there; it was soon discovered that the problem was in fact unsolvable for non-trivial cases. That is, although there were special cases (only 2 or 3 planets in the system for example) where a solution existed, a general solution was proved non-existent. 
+Sadly, it wasn't much longer after that before a fatal mistake in his proof was found. And the heartbreak doesn't end there; it was soon discovered that the problem was in fact unsolvable for non-trivial cases. That is, although there were special cases where a solution exists, a general solution was proved non-existent. 
 {% note success %}
 Although this tale has a rather disappointing conclusion, it is worth noting that this problem was a great inspiration for the invention of the mathemical field of chaos theory, devoted to understanding and analysing _chaotic_ systems such as $n$-body planetary motion.
 {% endnote %}
-So what are we to do. If no closed-form solution exists for these problems, how can we make predictions about planetary motion? How do we know that in a few years' time there won't be an apocalyptic collision between the Earth and another member of the solar system?
+If no closed-form solution exists for these problems, how can we make predictions about planetary motion? How do we know that in a few years' time there won't be an apocalyptic collision between the Earth and another member of the solar system?
 
 The answer is simulation. 
 
-Although the mathematical laws of the universe prevent us from generating an elegant formula for the state of an orbital system in the future, they does not prevent us from simulating such a system to any degree of accuracy we demand (provided we have enough time and computational resources). We can use such simulations to make accurate predictions about the future, letting us sleep easy at night, knowing that, at the very least, planetary collision will not be our downfall any time soon.
+Although the mathematical laws of the universe prevent us from generating an elegant formula for the state of an orbital system in the future, they do not prevent us from simulating such a system to any degree of accuracy we demand (provided enough computational resources). We can use such simulations to make accurate predictions about the future, letting us sleep easy at night, knowing that, at the very least, planetary collision will not be our downfall any time soon.
 
-In this post, we walk through the physics and code required to simulate a simple system of planetary motion using Python. Using some basic ideas from high school physics and rudimentary Python, we can create some stunning visual simulations. Before we get there though, we need a recap in the laws of motion.
+In this post, we walk through the physics and the code required to simulate a simple system of planetary motion using Python. Using some basic ideas from high school physics and rudimentary Python, we can create some stunning visual simulations. Before we get there though, we need a recap of the laws of motion.
 
 ## The Physics of Planetary Motion
 
 ### The Setup
 
-To keep things simple (both in terms of the physics and resulting visualisations), we restrict ourselves to a two-dimensional universe. We will, however, discuss how to generalise the methods demonstrated here to three dimensions at the end of the post.
+To keep things simple (both in terms of the physics and the resulting visualisations), we restrict ourselves to a two-dimensional universe. We will, however, discuss how to generalise the methods demonstrated here to three dimensions at the end.
 
 As with any physics problem, we have to start with some assumptions.
 
-The first of these is assuming that all planetary bodies act as point masses. That is to say, even though the bodies have a non-zero radius and therefore an area, we assume that the entirety of their mass is located at their centre. This makes calculations related to gravitational forces far easier with minimal impact on the resulting values in most circumstances. If there are any collisions between two masses, they become one with a point mass equal to the sum of the two individual masses.
+The first of these is assuming that all planetary bodies act as point masses. That is to say, even though the bodies have a non-zero radius and therefore an area, we assume that the entirety of their mass is located at the centre. This makes calculations related to gravitational forces far easier with minimal impact on the resulting values in most circumstances. If there are any collisions between two masses, they become one with a point mass equal to the sum of the two individual masses.
 
-A second is that we assume the forces acting on our planetary bodies are constant over very short durations. This allows us to use a simple set of equations known as SUVAT (more on this later) instead of relying on complex integral calculus. This assumption is largely reasonable, only failing substantially when we get close to massive bodies (such as a black hole or neutron star), at which point the outcome (collision and merging) of motion is essentially determined already.
+We also assume that the forces acting on our planetary bodies are constant over very short durations. This allows us to use a simple set of equations known as SUVAT (more on this later) instead of relying on complex integral calculus. This assumption is largely reasonable, only failing substantially when we get close to massive bodies (such as a black hole or neutron star), at which point the outcome of motion (collision and merging) is essentially determined already.
 
-We also make some more minor assumptions, such as assuming all planetary bodies are circular and that.
+We also make some minor assumptions, such as treating all planetary bodies as circular.
 
-Under these assumptions, and given the initial positions, velocities, and masses (plus some cosmetic conditions that not necessary for the physics) of our bodies, our goal is to simulate the resulting planetary motion.
+Under these assumptions, and given the initial positions, velocities, and masses of our bodies, our goal is to simulate the resulting planetary motion.
 
 ### Deriving Motion
 
@@ -86,11 +86,11 @@ F_{1,2}^{(x)} = F_{1,2} \cos(\theta) \\
 F_{1,2}^{(y)} = F_{1,2} \sin(\theta)
 $$
 
-Theta, here, represents the angle between the two bodies and is calculated using this formula.
+Here Theta represents the angle between the two bodies and is calculated using this formula.
 
 $$ \theta = \arctan\left(\frac{dx}{dy}\right)$$
 
-This however only gives us the forces acting between bodies 1 and 2. In the case we have $n$ bodies, we have to add up the force contributions from each of these to see the total impact on the body 1. That is,
+This however only gives us the forces acting between bodies 1 and 2. In the case we have $n$ bodies, we have to add up the force contributions from each of these to see the total impact on the first body. That is,
 
 $$
 F_1^{(x)} = F_{1,2}^{(x)} + F_{1,3}^{(x)} + \ldots + F_{1,n}^{(x)}\\
@@ -99,17 +99,17 @@ $$
 
 with similar results for all other bodies.
 
-From this, the component acceleration of the object gravitational attraction with the other bodies is calculated using Newton's second law. We shall continue using only the $x$ component, noting that the same process is used for the $y$ component too.
+From this, the component acceleration of the object's gravitational attraction with the other bodies is calculated using Newton's second law. We shall continue using only the $x$ component, noting that the same process is used for the $y$ component.
 
 $$ a_1^{(x)} = \frac{F_1^{(x)}}{M_1}$$
 
-As hinted at earlier, because we are assuming forces and therefore acceleration to be constant over short time periods, we can use a set of formula known as the SUVAT equations from here on out. These relate the quantities of acceleration, current/new velocity, change in position, and time difference, in such a way that knowing any three gives you the others. Well, we know our fixed timestep, and the current velocity, and we just calculated the acceleration acting on the body, so we are good to go.
+Because we are assuming forces and therefore acceleration to be constant over short time periods, we can use a set of formulae known as the SUVAT equations. These relate acceleration, current/new velocity, change in position, and time difference, in such a way that knowing any three gives you the others. We know our fixed timestep, the current velocity, and we just calculated the acceleration acting on the body, so we are good to go.
 
-We start by calculating the new velocity ($v_1^{(x)}$) of the body. This is given by this formula, where $u_1^{(x)}$ is the current $x$-component of the first bodies velocity and $dt$ is the timestep we have chosen.
+We start by calculating the new velocity ($v_1^{(x)}$). It is given by the following formula, where $u_1^{(x)}$ is the current $x$-component of the first body's velocity and $dt$ is the timestep we have chosen.
 
 $$v_1^{(x)} = u_1^{(x)} + a_1^{(x)}dt$$
 
-The final step it to calculate the change in position of the body. We again rely on the SUVAT equations, this time we have that the change in position is.
+The final step it to calculate the change in the position of the body, again using the SUVAT equations.
 
 $$ v_1^{(x)} - \frac{1}{2}a_1^{(x)} dt^2$$
 
@@ -123,7 +123,7 @@ for the change in $x$-position. Since we update the velocity $u_1^{(1)}$ to beco
 {% endnote %}
 ### Handling Collisions
 
-A special case that must be accounted for is collisions. Although the masses are treated as point sources of gravity, a radius for each mass has still been set to allow for collisions. In this model, we assume that when two masses collide they merge and move forward as one mass with the combined momentum of each. First, the momentum of each object is calculated,
+A special case that must be accounted for is collisions. Although the masses are treated as point sources of gravity, a radius for each mass was set to allow for collisions. In this model, we assume that when two masses collide they merge and move forward as one mass with the combined momentum of each. First, the momentum of each object is calculated,
 
 $$
 p_1 = M_1v_1 \\
@@ -138,7 +138,7 @@ In order to calculate the velocity of the new object, we divide its momentum by 
 
 $$ v_{\text{new}} = \frac{p_{\text{new}}}{M_{\text{new}}} = \frac{M_1v_1 + M_2v_2}{M_1 + M_2}$$
 
-The simulation then carries on as before, just with one less object.
+The simulation then carries on as before, just with one object fewer.
 {% note info %}
 A more intuitive way of viewing the above derivation is that the new velocity is the mass-weighted average of the two original velocities.
 {% endnote %}{% note warning %}
@@ -146,9 +146,9 @@ Note, that the momentums above are actually two-dimensional vectors with $x$ and
 {% endnote %}
 ## The Code
 
-Now that we understand the physics behind our simulation, we can start coding it up. To keep things simple we will only focus on the aspects of the code relevant to physics (as opposed to the additional code for visualisation and animation). The full code however can be found here.
+Now that we understand the physics behind our simulation, we can start coding it up. To keep things simple we will only focus on the aspects of the code relevant to physics (as opposed to the additional code for visualisation and animation). The full code can be found here.
 
-As mentioned before, the first step is to set up the initial conditions, in this case, the bodies are set up in the a list called `planets`, containing there physical and aesthetic data.
+The first step is to set up the initial conditions, in this case, the bodies are set up in a list called `planets`.
 
 ```python
 planets = [
@@ -178,27 +178,27 @@ planets = [
 {% note info %}
 Note that all units for the simulation are [SI units](https://en.wikipedia.org/wiki/International_System_of_Units) (meters, seconds, etc.)
 {% endnote %}
-In addition to this, we must also define some constants that shall be used later.
+In addition, we define some constants that shall be used later.
 
 ```python
 DT = 5e6
 G = 6.67408e-11
 ```
 
-`DT` represents the timestep (in seconds) used in our simulation and 'G' is the gravitational constant used in Newton's law of gravitation. The latter is determined by physics (though you can use different values for simulating different universes) though the former must be chosen.
+`DT` represents the timestep (in seconds) used in our simulation and 'G' is the gravitational constant. The latter is determined by physics (though you can use different values for simulating different universes).
 
-It is important to use an appropriate timestep. Using timesteps that are too large will produce inaccurate simulations, as we cannot rely on the assumption of constant force/acceleration that the SUVAT equations require. In contrast, a simulation that uses a miniscule timestep will run much slower, as the number of calculations needed to produce the simulation is greater. At the end of the post we discuss methods for optimising this approach further to allow for a smaller timestep without requiring more computational power.
+It is important to use an appropriate timestep. Using large timesteps will produce inaccurate simulations, as we cannot rely on the assumption of constant force/acceleration that the SUVAT equations require. In contrast, a simulation that uses a miniscule timestep will run much slower, as the number of calculations is greater. At the end of the post we discuss methods for optimising this approach further to allow for a smaller timestep without requiring more computational power.
 
-From here, we follow the same logic as in the previous section:
+From here, we follow the same procedure as in the previous section:
 
 1. Calculate the distances between the bodies
 2. Calculate the gravitational forces between the bodies
-3. Calculate the component forces in the 'x' and 'y' directions
-4. Calculate the component accelerations due to this attraction
+3. Calculate the component forces in the $x$ and $y$ directions
+4. Calculate the component accelerations due to attraction
 5. Calculate the change in velocities due to the acceleration
 6. Calculate the new positions
 
-The force calculations take place in nested loop, the outer layer looping through each planet, and the inner looping through all other planets to calculate the force acting between them.
+The force calculations take place in a nested loop, the outer layer looping through each planet, and the inner looping through all other planets to calculate the force acting between them.
 
 ```python
 for i, p1 in enumerate(planets):
@@ -207,7 +207,7 @@ for i, p1 in enumerate(planets):
             # Calculate forces...
 ```
 
-Inside of here there are multiple lines responsible for calculating the total forces acting on each body. The first line extracts the $x$ position of both planets in question and calculates the difference between them (the same is shown for 'y' below). The code then follows the logic as before, calculating the force due to gravity and then the acceleration. Comparing the code below to the equations in the previous section, we see that they are identical.
+Inside there are multiple lines responsible for calculating the total forces acting on each body. The first line extracts the $x$ position of both planets in question and calculates the difference between them (the same is shown for 'y' below). Then we calculate the force due to gravity and the acceleration.
 
 ```python
 dx = p2['position']['x'] - p1['position']['x']
@@ -273,12 +273,12 @@ The final thing to mention is that a wrap around function (similar to the classi
 
 ## An Example Planetary System
 
-Now that we have physics and code for our simulation sorted, let's see it in action. We simulate two bodies orbiting a third larger body. That said, the code is incredibly flexible so you are encouraged to play with it yourself.
+Now that we have the physics and the code for our simulation sorted, let's see it in action. We simulate two bodies orbiting a third larger body. That said, the code is incredibly flexible so you are encouraged to play with it yourself.
 
 
 
 
-<video src="/images/planetary-motion/planetary_motion.mp4" controls  style="margin: 0 auto; display: block">
+<video src="planetary_motion.mp4" controls  >
       Your browser does not support the <code>video</code> element.
     </video>
 
@@ -288,9 +288,9 @@ Now that we have physics and code for our simulation sorted, let's see it in act
 
 ### Moving to 3D
 
-As mentioned before, this is the most simple version of an $n$-Body simulation and therefore can be expanded in many ways. The first major step would be to generate a simulation in three-dimensions. In order to do this, the force would have to be split into its three component forces in the $x$, $y$ and $z$ directions,thus allowing the calculation of the change in position/velocity in each direction.
+As mentioned before, this is the most simple version of an $n$-Body simulation and therefore can be expanded in many ways. The first major step would be to generate a simulation in three-dimensions. In order to do this, the force would have to be split into its three component forces in the $x$, $y$ and $z$ directions, thus allowing the calculation of the change in position/velocity in each direction.
 
-Given a vector $(x, y, z)$ we first calculate the polar angle $\theta$ and azimuthal angle $\phi$ using the following formulae.
+Given a vector $(x, y, z)$ we first calculate the polar angle $\theta$ and the azimuthal angle $\phi$ using the following formulae.
 
 $$
 \theta = \arccos\left(\frac{z}{\sqrt{x^2 + y^2 + z^2}}\right) \\
@@ -305,7 +305,7 @@ F^{(y)} = F \sin(\theta)\sin(\phi)\\
 F^{(z)} = F \cos(\theta)
 $$
 
-From here, the mathematics is the same same as the two-dimensional case.
+From here, the mathematics is the same as in the two-dimensional case.
 
 ### Turbocharging the Simulation
 
@@ -314,4 +314,25 @@ In the name of simplicity, many opportunities for efficiency have been deliberat
 1. Due to Newton's second law, once we know the force acting on body $i$ by body $j$, we know the opposing force to be equal. We can therefore halve the number of force calculations we use.
 2. Base Python is notoriously slow, instead switching to NumPy, or better yet, JIT-compilation using Numba would offer a massive speed boost.
 3. Due to the nature of the problem, there is a lot of scope for parallelisation. An efficient solution would break up the motion calculations between cores to avoid downtime.
-4. For large simulations for $n$ >> 1 bodies, it may be worthwhile chunking the 'universe' up into grids based on the largest mass in the system, so that any planets in different grid cells have negligible impacts on each other and so can be omitted from resultant force calculations.
+4. For large simulations for $n$ >> 1 bodies, it may be worthwhile chunking the 'universe' up into grids based on the largest mass in the system, so that any planets in different grid cells have negligible impacts on each other and so can be omitted from the resultant force calculations.## Additional Notes
+
+### Moving to 3D
+
+As mentioned before, this is the most simple version of an $n$-Body simulation and therefore can be expanded in many ways. The first major step would be to generate a simulation in three-dimensions. In order to do this, the force would have to be split into its three component forces in the $x$, $y$ and $z$ directions, thus allowing the calculation of the change in position/velocity in each direction.
+
+Given a vector $(x, y, z)$ we first calculate the polar angle $\theta$ and the azimuthal angle $\phi$ using the following formulae.
+
+$$
+\theta = \arccos\left(\frac{z}{\sqrt{x^2 + y^2 + z^2}}\right) \\
+\phi = \arctan\left(\frac{y}{x}\right)
+$$
+
+Some trigonometry then gives the following results.
+
+$$
+F^{(x)} = F \sin(\theta)\cos(\phi) \\
+F^{(y)} = F \sin(\theta)\sin(\phi)\\
+F^{(z)} = F \cos(\theta)
+$$
+
+From here, the mathematics is the same as in the two-dimensional case.
