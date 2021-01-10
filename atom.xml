@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-01-04T00:00:00.000Z</updated>
+  <updated>2021-01-10T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Simulating Planetary Motion with Python</title>
+    <link href="https://research.wdss.io/planetary-motion/"/>
+    <id>https://research.wdss.io/planetary-motion/</id>
+    <published>2021-01-10T00:00:00.000Z</published>
+    <updated>2021-01-10T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Tracking the motion of the planets is a challenge that is proven to be intractable using pure mathematics alone. Can we, however, find a solution using data science?
+    
+    </summary>
+    
+    
+      <category term="Natural Sciences" scheme="https://research.wdss.io/categories/Natural-Sciences/"/>
+    
+      <category term="Physics" scheme="https://research.wdss.io/categories/Natural-Sciences/Physics/"/>
+    
+    
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
+      <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
+    
+      <category term="animation" scheme="https://research.wdss.io/tags/animation/"/>
+    
+  </entry>
   
   <entry>
     <title>A Data-Driven Dive into UK Party Conference Leaders&#39; Speeches</title>
@@ -33,6 +60,10 @@
       <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
     
       <category term="Natural Language Processing" scheme="https://research.wdss.io/categories/Computer-Science/Natural-Language-Processing/"/>
+    
+      <category term="Social Sciences" scheme="https://research.wdss.io/categories/Social-Sciences/"/>
+    
+      <category term="Politics" scheme="https://research.wdss.io/categories/Social-Sciences/Politics/"/>
     
     
       <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
