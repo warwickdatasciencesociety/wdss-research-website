@@ -10,6 +10,7 @@ tags:
 - web-scraping
 categories:
 - [Computer Science, Natural Language Processing]
+- [Social Sciences, Politics]
 languages:
 - r
 description: "Wordclouds, sentiment, and scrabble scores. In this post, we analyse and visualisation a collection Leaders' speeches, using traditional and not-so-traditional text analysis techniques."
