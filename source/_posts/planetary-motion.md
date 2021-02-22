@@ -278,7 +278,7 @@ Now that we have the physics and code for our simulation sorted, let's see it in
 
 
 
-<video src="/images/planetary-motion/planetary_motion.mp4" controls style="display: block; margin: auto" >
+<video src="planetary_motion.mp4" controls  >
       Your browser does not support the <code>video</code> element.
     </video>
 
