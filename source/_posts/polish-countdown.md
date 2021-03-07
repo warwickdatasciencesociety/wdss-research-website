@@ -1,0 +1,298 @@
+---
+title: "A Polish Approach to Countdown"
+date: 2020-12-09
+updated: 2020-12-09
+author: "Tim Hargreaves"
+contact: "https://www.linkedin.com/in/tim-hargreaves/"
+tags:
+- puzzle
+- lesson
+categories:
+- [Mathematics, Combinatorics]
+languages:
+- python
+description: "The Countdown numbers game is notoriously fiendish. That said, with the right computational tricks, it can be solved using only basic coding abilities."
+cover: /banners/polish-countdown.jpg
+---
+
+{% note info %}
+**Accessing Post Source**
+We are still working on getting this site set up, so source code for this post is not yet available. Check back soon and you'll be able to find it linked here.
+{% endnote %}
+Last night, to celebrate the end of term one, WDSS ran a social based on the classic British gameshow [Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show)). Countdown consists of two games—focused on numeracy and literacy, respectively—as well as a bonus condundrum. For this post we're going to take a look at the numbers game, and see how we can use some relatively basic Python coding to build an automatic solver for the problem.
+
+The motivation for writing this post (on top of it just being fun to do some Pythonic problem-solving) is two fold:
+
+1. A solution to the Countdown numbers game can be created using the concepts taught in WDSS's Beginner's Python course. This makes a nice example of how we can apply the learnings from the course to a real problem. Specifically, we will be manipulating lists (session 5), writing functions (session 6), and using a built-in Python library for benchmarking our solution (session 8).
+
+2. The main personal appeal of this problem, is that there is a clever way of looking at it which makes deriving a solution much simpler. We will talk about this more in the body of the post, but the key idea is that, when programming, the way you choose to represent the problem makes a massive impact on the complexity of your solution. This idea is vital for completing coding assessments for job applications or for competing in coding competitions (such as WDSS's *12 Days of Python*—coming soon, so keep your eyes on our socials!).
+
+Before we start to build our solution, let's quickly recap the rules of the Countdown numbers game:
+
+- Six numbers are chosen at random for the contestants to use.
+- A three-digit target number is chosen at random.
+- The contestants are given 30 seconds to get as close to the target number as possible using only the operators $+$, $-$, $\times$, $\div$.
+- Not all numbers need to be used, and each number can only be used once
+- At all times, the running total must be a non-negative integer
+
+Points are then awarded to each contestant based on how close they came to the target number.
+{% note info %}
+The rules above are deliberately brief. For the full set of rules see [here](http://datagenetics.com/blog/august32014/index.html).
+{% endnote %}
+As an example, the six available numbers might be $50, 25, 4, 6, 2, 9$ with a target of $303$. A  solution could then be
+
+$$
+\begin{aligned}
+50 + 25 &= 75 \\
+75 \times 4 &= 300 \\
+6 \div 2 &= 3 \\ 
+300 + 3 &= 303
+\end{aligned}
+$$
+
+Notice that we never used the $9$, but this is allowed.
+
+We could also represent this solution as a single expression.
+
+$$(50 + 25) \times 4 + (6 \div 2) = 303$$
+
+That said, it is often easier to think of the problem by looking at the running total.
+
+## Brackets Begone
+
+Although working through the vast possible combinations of numbers and operations to reach the target is a difficult task for a human, this is actually a fairly lightweight task for a modern computer. Even if we take a brute force approach, simply testing every possible way of arranging the numbers, we will still only need a matter of seconds to reach a solution.
+
+That said, such a brute force solution will not scale way. Add more operators and increase the amount of numbers available and the solution's runtime will grow exponentially, quickly becoming intractable even on the fastest computing hardware. For our use case though, restricted to the standard rules of Countdown, brute force will do just fine.
+
+With that in mind, we have the following approach to the problem:
+- Run through every possible solution
+- Check that the solution is valid (no negatives/fractions)
+- Record how far the solution was to the target
+- Print out the best solution
+
+This sounds simple enough, but how exactly do we run through *every single* possible solution?
+
+If we jumped at this problem before pausing to think, we might start by trying to iterate through all expressions that look like the one we had above ($(50 + 25) \times 4 + (6 \div 2)$). This would certainly be a valid approach, but it would also be nightmarish to code up.
+
+The reason for this, is that there is an implicit restriction that our brackets must match. Furthermore, this is not a simple rule:
+
+- Brackets must be opened before being closed
+- By the end of the expression, all brackets must be closed
+- Brackets must contain a meaningful expression (i.e. we would want to bracket a single number)
+
+Even if we could somehow find the energy to create such valid bracketed expressions, we would still have the issue of having to determine when brackets add value; in many cases, brackets are redundant and so we would be wasting time checking equivalent solutions multiple times.
+
+It may seem at this point that we've reached a dead end. Either we have to give up or face the complexities of efficiently iterating over these expressions. Thankfully, though, there is an alternative solution which will drastically simplify our approach.
+
+### Polish Notation
+
+From our early years we start to build up a sense of what maths *looks* like. It's always the same pattern: take two numbers, slap an operator between them, and you're done. Obviously, there are many elements of mathematical notation that do not follow this template, but it is certainly true for lowest level building blocks of addition, subtraction, multiplication and division.
+
+We are so used to this way of performing arithmetic, that it may seem strange to even consider that there could be another way. Nevertheless, there is, and it has some remarkable properties that will make you question why we even bothered with our usual notation in the first place.
+
+This new mathematical system is known as Polish notation, named for the nationality of logician Jan Łukasiewicz, who invented the method in 1924. The difference between this system and our standard approach is that we always put the operator before the two values it acts on, rather than in between. For example, what was 
+
+$$3 + 4$$ 
+
+in our old system would become 
+
+$$+ \, 3 \, 4$$
+
+in Polish notation, the same going for the other standard arithmetic operators.
+{% note info %}
+Our standard notation has a name too—**in**fix notation—arising from how the operator sits **in**between the two operands. Polish notation is also called prefix notation (since the operator prefixes the operands) and there is also a variant called reverse Polish (postfix) notation in which the operator follows the operands.
+{% endnote %}
+We can also use multiple operators in a Polish notation expression. In this case, we evaluate them one at a time.
+
+$$
+\begin{aligned}
+&\times \, 5 \, + \, 3 \, 4 \\
+=&\, \times \, 5 \, 7 \\
+=&\, 35
+\end{aligned}
+$$
+
+Notice how we knew to evaluate the addition before multiplication as this was the only operator followed by two numbers. Once we evaluated $+ \, 3 \, 4 = 7$, the multiplaction operator becomes followed by two numbers and so we can evaluate that too.
+
+In looking at this example, we just discovered what makes Polish notation so powerful. It may at first seem like this new approach adds nothing but confusion to our arithmetic, but it in fact comes with an incredible benefit: we never need to use brackets!
+
+It may be hard to wrap your head around why this is the case, but it is true. Polish notation has the special property that it is never ambiguous. Whereas an expression such as $1 + 2 \times 3$ in our standard notation could be interpreted as $(1 + 2) \times 3$ or $1 + (2 \times 3)$, Polish notation never has this ambiguity and so we can completely remove the need to consider brackets.
+
+This is the secret ingredient to our Countdown numbers game solution, allowing us to enumerate all possible solutions without worrying about bracketting rules, or duplicating equivalant cases.
+
+## Building a Solver
+
+### The Algorithm
+
+Although it is possible to create a solver that simply runs through all possible permutations of the 6 numbers and each choice of 5 operators, evaluating each using Polish notation and comparing to the target, there are some quick efficiency gains that we can invest in. That said, even the most basic solution will almost always find a solution in less than a second (requiring around a minute to find _all_ solutions).
+
+We improve on this naive approach by considering the skeleton of a solution. This is a term I have coined to refer to the patterns of operators and numbers in a solution. For example a skeleton could be `OONNOONONNN`, where `O` represents an operator and `N` a number. It is simpler conceptually (though admittedly not great for performance) to store a skeleton as a list of positions where we have operators. In this case, the above skeleton would be represented by `[0, 1, 4, 5, 7]`.
+
+This sounds like a lot of work but the benefit is massive. This is because there will be many skeletons that are invalid. We can therefore discard them before trying to fill them with numbers or operators, saving a lot of time in the process. We can check that a skeleton is valid by noting that each operation requires two inputs and returns one. For that reason, we can loop through the skeleton from left to right as we always do with Polish notation, incrementing our number count ever time we see a number, and decreasing it if we see an operator. As long as we never come across an operator whilst we have one or less numbers left, we have a valid skeleton.
+
+### The Code
+
+With that in mind, we can look at the following solution to the Countdown numbers game.
+
+
+```python
+import operator
+from itertools import combinations, permutations, product
+from more_itertools import distinct_permutations
+
+OPERATORS = {
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+    "/": operator.floordiv,
+}
+
+def is_valid(skeleton):
+    num_count = 0
+    last_op_pos = -1
+    for op_pos in skeleton:
+        # All elements between operators must be numbers
+        num_count += op_pos - last_op_pos - 1
+        # Invalid if not enough numbers for operator
+        if num_count < 2:
+            return False
+        num_count -= 1
+        last_op_pos = op_pos
+    return True
+
+def evaluate(sequence, target):
+    # Use stack to keep track of unused numbers
+    stack = []
+    solutions = []
+    # Loop through sequence and evaluate result
+    for i, s in enumerate(sequence):
+        if isinstance(s, int):
+            stack.append(s)
+        else:
+            if len(stack) < 2:
+                break
+            n1 = stack.pop(0)
+            n2 = stack.pop(0)
+            
+            # If sequence results in invalid intermediate step, stop evaluation
+            if s == "-" and n2 >= n1:
+                break
+            if s == '/' and n1 % n2 != 0:
+                break
+            
+            r = OPERATORS[s](n1, n2)
+            
+            if r == target:
+                solutions.append(sequence[:i+1])
+            
+            stack.append(r)
+    return solutions
+
+def distinct_ordered_combinations(iterable, r):
+    seen = set()
+    for combination in combinations_with_replacement(iterable, r):
+        for permutation in permutations(combination):
+            if permutation not in seen:
+                yield permutation
+                seen.add(permutation)
+
+def solve(numbers, target):
+    solutions = []
+    n = len(numbers)
+    sequence = [None for __ in range(2*n-1)]
+    
+    for skeleton in combinations(range(2*n-1), n-1):
+        if is_valid(skeleton):
+            for nums in distinct_permutations(numbers):
+                for ops in distinct_ordered_combinations(OPERATORS, n-1):
+                    # Build sequence from skeleton and number/operator choice
+                    nums_iter = iter(nums)
+                    ops_iter = iter(ops)
+                    i = 0
+                    for j in range(2*n-1):
+                        if skeleton[i] == j:
+                            sequence[j] = next(ops_iter)
+                            i += 1
+                        else:
+                            sequence[j] = next(nums_iter)
+                    new_solutions = evaluate(sequence, target)
+                    solutions.extend(new_solutions)
+    
+    return solutions
+```
+
+### Testing
+
+We can now test our code on an example problem.
+
+
+```python
+NUMBERS = [75, 50, 6, 3, 8, 2]
+TARGET = 513
+
+solutions = solve(NUMBERS, TARGET)
+```
+
+The is a large number of solutions, many essentially equivalent.
+
+
+```python
+len(solutions)
+```
+
+
+
+
+    5076
+
+
+
+These solutions are still written in Polish notation. I will leave it as a challenge to the reader to write code to translate these back to our usual infix notation or a set of running total instructions.
+
+
+```python
+solutions[0]
+```
+
+
+
+
+    [2, 3, '*', 8, '*', 50, '+', 6, '*', 75, '-']
+
+
+
+In this case, however, the solution is:
+
+$$
+\begin{aligned}
+2 \times 3 &= 6 \\
+6 \times 8 &= 48 \\
+48 + 50 &= 98 \\ 
+98 \times 6 &= 588 \\
+588 - 75 &= \mathbf{513}
+\end{aligned}
+$$
+
+## Going Beyond
+
+Before we wrap-up, I will briefly run through a few ways to speed up this solution, allowing it to be used for more general applications.
+
+### Turbocharging the Algorithm
+
+Our solution is very loop-heavy, with multiple layers of nested `for` loops. Python is not-renowned for the speed of its loops and so we likely lose a considerable amount of efficiency in doing this. We can largely mitigate this issue by using JIT-compiled Python, which optimises our code before running it to make loops and other slow techniques more efficient.
+
+One approach to this is using [PyPy](https://www.pypy.org/) a JIT-compiled implementation of Python. Alternatively (and my preference), you can use [Numba](https://numba.pydata.org/), a package for JIT-compiling the standard Python implementation. Numba also has great compatibility with NumPy, which could perhaps be used to extract further performance.
+
+### Guided Search
+
+Currently, our approach is searching the solution space completely at random. This is a valid approach when we want every solution, but not when we need just one. Instead, we might want to look into an approach that _searches_ for a solution. This could be based on an evolutionary method or by building a sort of tree structure connecting solutions together (perhaps working towards and back from the solution at the same time). These ideas are far beyond the scope of an introductory tutorial, but are worth looking into if this sort of problem interests you.
+
+### Optimisations and Branch-Cutting
+
+Finally, there are still many time-saving tricks we can use with our existing approach.
+
+The most pressing optimisation, is to avoid copying memory around. At many points in our code we are moving and creating new memory. [It is possible](https://github.com/rvedotrc/numbers) to create an implementation in which we only have one state that is modified as we search the space of solutions.
+
+We could also avoid identical solutions, perhaps by enforcing that addition and multiplication expressions have their operands in ascending order. In a similar way, we can avoid multiplying by 1, as this does not change the solution.
+
+These small changes add up and could lead to an implementation capable of finding all solutions in a matter of seconds.
