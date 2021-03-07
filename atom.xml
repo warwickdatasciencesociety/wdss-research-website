@@ -102,6 +102,31 @@
   </entry>
   
   <entry>
+    <title>A Polish Approach to Countdown</title>
+    <link href="https://research.wdss.io/polish-countdown/"/>
+    <id>https://research.wdss.io/polish-countdown/</id>
+    <published>2020-12-09T00:00:00.000Z</published>
+    <updated>2020-12-09T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      The Countdown numbers game is notoriously fiendish. That said, with the right computational tricks, it can be solved using only basic coding abilities.
+    
+    </summary>
+    
+    
+      <category term="Mathematics" scheme="https://research.wdss.io/categories/Mathematics/"/>
+    
+      <category term="Combinatorics" scheme="https://research.wdss.io/categories/Mathematics/Combinatorics/"/>
+    
+    
+      <category term="lesson" scheme="https://research.wdss.io/tags/lesson/"/>
+    
+      <category term="puzzle" scheme="https://research.wdss.io/tags/puzzle/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Horsing Around: Problem-Solving Using Monte Carlo Markov Chains</title>
     <link href="https://research.wdss.io/horsing-around/"/>
     <id>https://research.wdss.io/horsing-around/</id>
