@@ -109,3 +109,11 @@ feed:
     content:
     content_limit: 100
     content_limit_delim: ' '
+    
+markdown:
+  plugins:
+    - plugin:
+      name: '@neilsustc/markdown-it-katex'
+      options:
+        strict: true
+
