@@ -43,6 +43,13 @@ each article , index in page.posts.data
             span.article-meta__separator |
             i.fa.fa-user.article-meta__icon(aria-hidden="true")
             a(href=article.contact).article-meta__categories #[=article.author]
+        if (theme.post_meta.post.author && article.authors_plus)
+          span.article-meta
+            span.article-meta__separator |
+            each item, index in article.authors_plus
+              if (index > 0)
+                span , 
+              a(href=article.contacts_plus[index]).article-meta__categories #{item}
         if (theme.post_meta.page.categories && article.categories.data.length > 0)
           span.article-meta
             span.article-meta__separator |

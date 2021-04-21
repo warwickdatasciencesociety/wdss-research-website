@@ -1,9 +1,23 @@
 if (theme.post_copyright && theme.post_copyright.enable && page.copyright != false)
   .post-copyright
-    .post-copyright__author
-      span.post-copyright-meta= _p('post.copyright.author') + ": "
-      span.post-copyright-info
-        a(href=page.contact) #[=page.author]
+    if (page.author)
+      .post-copyright__author
+        span.post-copyright-meta= _p('post.copyright.author') + ": "
+        span.post-copyright-info
+          a(href=page.contact) #[=page.author]
+    if (page.authors_plus)
+      .post-copyright__author
+        span.post-copyright-meta= "Authors: "
+        span.post-copyright-info
+          each item, index in page.authors_plus
+            if (index > 0)
+              span , 
+            a(href=page.contacts_plus[index]).post-meta__categories #{item}
+    if (page.editor)
+      .post-copyright__author
+        span.post-copyright-meta= "Editor: "
+        span.post-copyright-info
+          a(href=page.editor_contact) #[=page.editor]
     .post-copyright__type
       span.post-copyright-meta= _p('post.copyright.link') + ": "
       span.post-copyright-info

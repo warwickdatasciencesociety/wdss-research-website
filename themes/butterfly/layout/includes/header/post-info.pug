@@ -29,6 +29,14 @@
           span.post-meta__separator |
           i.fa.fa-user.post-meta__icon(aria-hidden="true")
           a(href=page.contact).post-meta__categories #[=page.author]
+      
+      if (theme.post_meta.post.author && page.authors_plus)
+        span.post-meta__categories
+          span.post-meta__separator |
+          each item, index in page.authors_plus
+            if (index > 0)
+              span , 
+            a(href=page.contacts_plus[index]).post-meta__categories #{item}
             
       if (theme.post_meta.post.categories && page.categories.data.length > 0)
         span.post-meta__categories
