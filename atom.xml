@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-02-22T00:00:00.000Z</updated>
+  <updated>2021-04-04T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Computational Approach to Evolutionary Game Theory</title>
+    <link href="https://research.wdss.io/evolutionary-game-theory/"/>
+    <id>https://research.wdss.io/evolutionary-game-theory/</id>
+    <published>2021-04-04T00:00:00.000Z</published>
+    <updated>2021-04-04T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      From abstraction to simulation, we try to solve the same evolutionary problem using both analytical and computational techniques but do we reach the same conclusions?
+    
+    </summary>
+    
+    
+      <category term="Economics" scheme="https://research.wdss.io/categories/Economics/"/>
+    
+      <category term="Game Theory" scheme="https://research.wdss.io/categories/Economics/Game-Theory/"/>
+    
+    
+      <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
+    
+      <category term="animation" scheme="https://research.wdss.io/tags/animation/"/>
+    
+      <category term="agent-based-modelling" scheme="https://research.wdss.io/tags/agent-based-modelling/"/>
+    
+  </entry>
   
   <entry>
     <title>Visualising the Intersection of Disease and the Human Genome</title>
