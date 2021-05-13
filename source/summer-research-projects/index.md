@@ -58,7 +58,7 @@ For rough guidance, we label the proposed projects by the following levels of di
 **Note**: these difficulties correspond to the project as a whole. If a team is made of a domain expert and a technical lead, it is not the case that the domain expert requires the corresponding technical skills. 
 
 ## How To Apply?
-Project proposals and their requirements will be released in batches and published regularly to our [recruitment website](recruitment.wdss.io). 
+Project proposals and their requirements will be released in batches and published regularly to our [recruitment website](https://recruitment.wdss.io). 
 You can apply by sending your CV and answering two further questions in which you should demonstrate your motivation and suitability to undertake the project of interest. **Note:** You can apply for more than one project.
 
 Results to be announced by the end of Term 3 (Saturday 3 July 2021).
