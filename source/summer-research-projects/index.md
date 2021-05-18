@@ -46,14 +46,14 @@ The required skills and experience for each project vary and are listed in each 
 
 However, some of the projects will require further skills and knowledge not covered by these courses: i.e. expertise in statistics, familiarity with specific data science techniques (NLP, neural networks, dimensionality reduction), or specific domain knowledge.
 
-For rough guidance, we label the proposed projects by the following levels of difficulty:
+For rough guidance, we label the proposed projects by the following levels of difficulty: 
 | Difficulty level | Interpretation                                                                                            |
 |------------------|-----------------------------------------------------------------------------------------------------------|
-| *                | Beginner-friendly (undertake one of our coding courses and complete a mini-project in parallel)                                                                                 |
-| **               | Basic coding/data science knowledge required                                                            |
-| ***              | More independent research and intermediate coding skills required                    |
-| ****             | Past project experience and specific skillset are expected                                     |
-| *****            | Pushing the limits of what a student is capable of achieving. Hard projects, yet impressive outputs  |
+| &#x2605; &#x2606; &#x2606; &#x2606; &#x2606;                 | Beginner-friendly (undertake one of our coding courses and complete a mini-project in parallel)                                                                                 |
+| &#x2605; &#x2605; &#x2606; &#x2606; &#x2606;               | Basic coding/data science knowledge required                                                            |
+| &#x2605; &#x2605; &#x2605; &#x2606; &#x2606;               | More independent research and intermediate coding skills required                    |
+| &#x2605; &#x2605; &#x2605; &#x2605; &#x2606;              | Past project experience and specific skillset are expected                                     |
+| &#x2605; &#x2605; &#x2605; &#x2605; &#x2605;             | Pushing the limits of what a student is capable of achieving. Hard projects, yet impressive outputs  |
 
 **Note**: these difficulties correspond to the project as a whole. If a team is made of a domain expert and a technical lead, it is not the case that the domain expert requires the corresponding technical skills. 
 
