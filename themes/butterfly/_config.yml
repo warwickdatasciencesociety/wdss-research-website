@@ -10,7 +10,7 @@ menu:
   Tags: /tags/ || fa fa-tags
   Categories: /categories/ || fa fa-folder-open
   Archives: /archives/ || fa fa-archive
-  Summer Research Projects: /summer-research-projects/ || fa fa-users
+  # Summer Research Projects: /summer-research-projects/ || fa fa-users
   #About: /about/ || fa fa-info-circle
 
 # Favicon
