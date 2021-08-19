@@ -10,7 +10,6 @@ menu:
   Tags: /tags/ || fa fa-tags
   Categories: /categories/ || fa fa-folder-open
   Archives: /archives/ || fa fa-archive
-  # Summer Research Projects: /summer-research-projects/ || fa fa-users
   #About: /about/ || fa fa-info-circle
 
 # Favicon
@@ -532,7 +531,7 @@ aside:
 
 # 網站公告
 announcement:
-  content: WDSS are recuiting students for our summer research projects. Find out more using the link in the top bar.
+  content: WDSS is recruiting to its research project teams on a rolling basis. Make sure to follow us on social media to hear abot the latest opportunities.
 
 # busuanzi count for PV / UV in site
 # 訪問人數
