@@ -11,7 +11,7 @@ if not os.path.exists('source/_posts'):
 
 for post in os.listdir('content'):
     # check notebook exists
-    if post == '.ipynb_checkpoints':
+    if post in ('.ipynb_checkpoints', '.DS_Store'):
         continue
     notebook_path = f"content/{post}/{post}.ipynb"
     if not os.path.exists(notebook_path):
@@ -30,7 +30,7 @@ for post in os.listdir('content'):
             "--TagRemovePreprocessor.remove_single_output_tags=['remove_single_output']",
             "--TagRemovePreprocessor.remove_all_outputs_tags=['remove_all_output']",
         ], shell=True)
-    elif system == 'Linux':
+    elif system in ('Linux', 'Darwin'):
         process = subprocess.Popen(' '.join([
             'jupyter nbconvert',
             notebook_path,
