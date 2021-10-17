@@ -17,7 +17,7 @@ description: "How well do you know your celebs? This post discusses a web app de
 cover: /banners/higher-or-lower.jpg
 ---
 {% note info %}
-This post is the corresponding write-up for a WDSS project in which a small team of society members collaborated to produce a web-toy that plays a game of Higher or Lower using the Twitter follower counts of celebrities. You can play this game at [this link](https://shiny.warwickdatascience.com/higher-or-lower/).
+This post is the corresponding write-up for a WDSS project in which a small team of society members collaborated to produce a web-toy that plays a game of Higher or Lower using the Twitter follower counts of celebrities. You can play this game at [this link](https://app.wdss.io/higher-or-lower/).
 {% endnote %}
 ## Motivation
 
