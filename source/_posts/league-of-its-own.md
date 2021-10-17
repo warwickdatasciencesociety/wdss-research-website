@@ -16,7 +16,7 @@ description: "As universities wrangle over the top spots on the league table, it
 cover: /banners/league-of-its-own.jpg
 ---
 {% note info %}
-This post is the corresponding write-up for a WDSS project in which a pair of society members collaborated to produce a web app for visualizing university league table data. You can view the final product at [this link](https://shiny.warwickdatascience.com/league-table-explorer).
+This post is the corresponding write-up for a WDSS project in which a pair of society members collaborated to produce a web app for visualizing university league table data. You can view the final product at [this link](https://app.wdss.io/league-table-explorer/).
 {% endnote %}
 ## Motivation
 
