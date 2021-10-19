@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-10-17T20:29:55.973Z</updated>
+  <updated>2021-10-19T19:28:37.230Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Random Coin Flips</title>
     <link href="https://research.wdss.io/random-coin-flips/"/>
     <id>https://research.wdss.io/random-coin-flips/</id>
-    <published>2021-10-17T20:29:55.973Z</published>
-    <updated>2021-10-17T20:29:55.973Z</updated>
+    <published>2021-10-19T19:28:37.230Z</published>
+    <updated>2021-10-19T19:28:37.230Z</updated>
     
     <summary type="html">
     
@@ -40,6 +40,39 @@
       <category term="probability" scheme="https://research.wdss.io/tags/probability/"/>
     
       <category term="randomness" scheme="https://research.wdss.io/tags/randomness/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Predicting aqueous solubility with neural networks</title>
+    <link href="https://research.wdss.io/chemical-properties/"/>
+    <id>https://research.wdss.io/chemical-properties/</id>
+    <published>2021-10-17T00:00:00.000Z</published>
+    <updated>2021-10-17T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      Predicting aqueous of chemical compounds without the presence of a physical sample would make the process of drug discovery easier. Can machine learning help us achieve this?
+    
+    </summary>
+    
+    
+      <category term="Natural Sciences" scheme="https://research.wdss.io/categories/Natural-Sciences/"/>
+    
+      <category term="Chemistry" scheme="https://research.wdss.io/categories/Natural-Sciences/Chemistry/"/>
+    
+    
+      <category term="machine learning" scheme="https://research.wdss.io/tags/machine-learning/"/>
+    
+      <category term="molecular machine learning" scheme="https://research.wdss.io/tags/molecular-machine-learning/"/>
+    
+      <category term="chemistry" scheme="https://research.wdss.io/tags/chemistry/"/>
+    
+      <category term="solubility" scheme="https://research.wdss.io/tags/solubility/"/>
+    
+      <category term="esol" scheme="https://research.wdss.io/tags/esol/"/>
+    
+      <category term="python" scheme="https://research.wdss.io/tags/python/"/>
     
   </entry>
   
