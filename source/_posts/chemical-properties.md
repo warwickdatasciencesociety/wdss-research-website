@@ -1,7 +1,7 @@
 ---
 title: "Predicting aqueous solubility with neural networks"
-date: 2021-10-17
-updated: 2021-10-17
+date: 2021-10-19
+updated: 2021-10-19
 authors_plus:
 - "Aleksander Dukaczewski"
 - "Annie Stevenson"
