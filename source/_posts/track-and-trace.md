@@ -64,7 +64,7 @@ $$w_i=\mathbb{1}\{\textbf{1}^\text{T}\boldsymbol{t}_i + b_i>0\}$$
 
 The next challenge for our model was to account for selection bias in T&T survey observations. More specifically, infected individuals (who feel unwell and present symptoms) are more likely to get in contact with T&T and hence select into the survey, thus introducing bias into any transmission rate estimates. To mitigate this, we collect observations of $\boldsymbol{x}_i$ from a random survey and define $s_i$ to indicate whether or not the observation came from T&T:
 $$s_i=\begin{cases} 
-            1,\; \text{T&T sample} \\
+            1,\; \text{T\&T sample} \\
             0,\; \text{otherwise}
             \end{cases}$$
             
