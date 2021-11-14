@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-10-19T00:00:00.000Z</updated>
+  <updated>2021-11-14T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reinventing Test and Trace: A Bayesian Approach For Modelling SARS-CoV-2 Setting-Specific Transmission</title>
+    <link href="https://research.wdss.io/track-and-trace/"/>
+    <id>https://research.wdss.io/track-and-trace/</id>
+    <published>2021-11-14T00:00:00.000Z</published>
+    <updated>2021-11-14T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      One of the key failures many countries had in dealing with the COVID-19 pandemic was a lack of coherent, data-driven analysis on setting-specific transmission risk. In this article, we outline a novel first-principles hierarchical Bayesian model for setting-specific transmission that, alongside the corresponding data collection methodology, could help governments in determining pandemic control policy
+    
+    </summary>
+    
+    
+    
+      <category term="covid19" scheme="https://research.wdss.io/tags/covid19/"/>
+    
+      <category term="bayesian-modelling" scheme="https://research.wdss.io/tags/bayesian-modelling/"/>
+    
+      <category term="track-and-trace" scheme="https://research.wdss.io/tags/track-and-trace/"/>
+    
+  </entry>
   
   <entry>
     <title>Predicting aqueous solubility with neural networks</title>
