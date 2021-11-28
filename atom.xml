@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-11-14T00:00:00.000Z</updated>
+  <updated>2021-12-04T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oh Hell! - Reinforcement Learning for solving card games</title>
+    <link href="https://research.wdss.io/oh-hell/"/>
+    <id>https://research.wdss.io/oh-hell/</id>
+    <published>2021-12-04T00:00:00.000Z</published>
+    <updated>2021-12-04T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      In this article we are going to plays cards. Well, not exactly ... with the power of reinforecement learning we are going to train intelligent agents that will play the game for us!
+    
+    </summary>
+    
+    
+      <category term="Computer Science" scheme="https://research.wdss.io/categories/Computer-Science/"/>
+    
+      <category term="Games" scheme="https://research.wdss.io/categories/Computer-Science/Games/"/>
+    
+    
+      <category term="reinforcement-learning" scheme="https://research.wdss.io/tags/reinforcement-learning/"/>
+    
+      <category term="card-games" scheme="https://research.wdss.io/tags/card-games/"/>
+    
+      <category term="agent-learning" scheme="https://research.wdss.io/tags/agent-learning/"/>
+    
+  </entry>
   
   <entry>
     <title>Reinventing Test and Trace: A Bayesian Approach For Modelling SARS-CoV-2 Setting-Specific Transmission</title>
