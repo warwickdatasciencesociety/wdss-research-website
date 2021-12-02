@@ -3,7 +3,7 @@ title: "Oh Hell! - Reinforcement Learning for solving card games"
 date: 2021-12-04
 updated: 2021-12-04
 authors_plus:
-- Albert Nyarko-Agye
+- Albert Nyarko-Agyei
 - Alexandru Pascru
 - Ron Cvek
 contacts_plus:
@@ -20,11 +20,11 @@ categories:
 - [Computer Science, Games]
 languages:
 - Python
-description: "In this article we are going to plays cards. Well, not exactly ... with the power of reinforecement learning we are going to train intelligent agents that will play the game for us!"
+description: "In this article we are going to plays cards. Well, not exactly ... with the power of reinforcement learning we are going to train intelligent agents that will play the game for us!"
 cover: /banners/cards.jpg
 ---
 {% note info %}
-This post is the corresponding write-up for a WDSS project in which Albert Nyarko-Agyei, Alexandru Pascru and Ron Cvek applied reinforcement learning to better understand the mehanics of a British card game—<i>Oh Hell</i>. The rules and an online version of the game can be found [here](https://cardgames.io/ohhell/). Special credits to Henry Charlesworth for providing valuable insights. The main author of the blog-post is Albert Nyarko-Agye.
+This post is the corresponding write-up for a WDSS project in which Albert Nyarko-Agyei, Alexandru Pascru and Ron Cvek applied reinforcement learning to better understand the mehanics of a British card game—<i>Oh Hell</i>. The rules and an online version of the game can be found [here](https://cardgames.io/ohhell/). Special credits to Henry Charlesworth for providing valuable insights. The main author of the blog-post is Albert Nyarko-Agyei.
 {% endnote %}
 ## Introduction
 
