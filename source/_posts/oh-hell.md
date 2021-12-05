@@ -24,13 +24,13 @@ description: "In this article we are going to plays cards. Well, not exactly ...
 cover: /banners/cards.jpg
 ---
 {% note info %}
-This post is the corresponding write-up for a WDSS project in which Albert Nyarko-Agyei, Alexandru Pascru and Ron Cvek applied reinforcement learning to better understand the mehanics of a British card game—<i>Oh Hell</i>. The rules and an online version of the game can be found [here](https://cardgames.io/ohhell/). Special credits to Henry Charlesworth for providing valuable insights. The main author of the blog-post is Albert Nyarko-Agyei.
+This post is the corresponding write-up for a WDSS project in which Albert Nyarko-Agyei, Alexandru Pascru and Ron Cvek applied reinforcement learning to better understand the mechanics of a British card game—<i>Oh Hell</i>. The rules and an online version of the game can be found [here](https://cardgames.io/ohhell/). Special credits to Henry Charlesworth for providing valuable insights. The main author of the project and the blog-post is Albert Nyarko-Agyei.
 {% endnote %}
 ## Introduction
 
 The idea for this project started when I was introduced to the game, <i>Oh Hell</i>, by one of the contributors to the project. We played a variation where each player is given 7 cards and then the players take it in turn to predict how many rounds they will win. Interestingly, predicting correctly gives you extra points or 'tricks.' So, if many games are being played, a good prediction strategy is needed. 
 
-After bidding, the round starts with the player to the left of the dealer playing a card from their hand. Each player then has to play a card from the same suit if they have one, otherwise any card from their hand is permisible. Once everyone has played a card, the player who played the highest card from the first suit wins the round, gets a trick added to their total, and starts the next round. Two cavets to these rules are:
+After bidding, the round starts with the player to the left of the dealer playing a card from their hand. Each player then has to play a card from the same suit if they have one, otherwise any card from their hand is permissible. Once everyone has played a card, the player who played the highest card from the first suit wins the round, gets a trick added to their total, and starts the next round. Two caveats to these rules are:
 
 1.   Along with dealing cards for the game, a trump card is drawn and if a card from with the same suit is played, it will beat every other suit.
 
@@ -52,7 +52,7 @@ The first step was to implement a game of <i>Oh Hell</i> in Python. Most games s
 
 The rules of <i>Oh Hell</i> use elements of <i>Poker</i> and <i>Uno</i> which have already been implemented countless times. The module [RLCARD](https://github.com/datamllab/rlcard) by MIT has a set of already implemented environments for some card games, including <i>Poker</i> and <i>Uno</i>. Also the structure of RLCARD's environments is very clean, so the base of this project used a lot of their methods. At the time of development, however, the environments in RLCARD were only for two-player games and did not have a PPO implementation (will cover more) so it had to be extended.
 
-Below is the structure of the different classess in the code. Composition was used instead of inheritance; for instance, the Round class creates instances of players, a dealer, and a judger and their interaction is controlled within the Round class. A round in this code represents every player taking a single action, making a bid or playing a single card. A game represents the start of the bidding to the last card being played. 
+Below is the structure of the different classes in the code. Composition was used instead of inheritance; for instance, the Round class creates instances of players, a dealer, and a judger and their interaction is controlled within the Round class. A round in this code represents every player taking a single action, making a bid or playing a single card. A game represents the start of the bidding to the last card being played. 
 
 [![Structure-of-code](/images/oh-hell/gamecode.jpg 'Structure of Code')](https://github.com/LeLingu/OhHellProject/tree/main/rlohhell/games/ohhell)
 
@@ -68,7 +68,7 @@ The encoding for the model at the time of this blog is below, and a detailed exp
 
 ## Opponents for the agent and NFSP
 
-After extending the environment to a four-player game, what the agent would train against came into question. The approach that was taken in this project was inspired by the idea of **Neural Ficticous Self-Play** developed by David Silver and Johannes Heinrich, leading researchers in RL. At it's core, the idea is to train the agent against itself. Initially, a basic model was trained against random agents, then a new model was trained against three versions of the last agent. The theory is to repeat this process each time until the new agent beats the old agents. Below is a snippet of the code from the environment that uses this idea: 
+After extending the environment to a four-player game, what the agent would train against came into question. The approach that was taken in this project was inspired by the idea of **Neural Fictitious Self-Play** developed by David Silver and Johannes Heinrich, leading researchers in RL. At it's core, the idea is to train the agent against itself. Initially, a basic model was trained against random agents, then a new model was trained against three versions of the last agent. The theory is to repeat this process each time until the new agent beats the old agents. Below is a snippet of the code from the environment that uses this idea: 
 
 
 ```python
@@ -93,7 +93,7 @@ while self.game.players[self.game.current_player].name != 'Training':
 
 ## Choosing an RL algorithm
 
-Coming back to the function we need to approximate, the **policy**, there are a few different methods to choose from. However, they can all be categorised into two groups. Methods that generate training data (experience) from the same policy that is being evaluated are called **on-policy**. Methods that have two seperate policies, one for generating experience and another for evaluation, are called **off-policy**. 
+Coming back to the function we need to approximate, which is formally called the **policy**, there are a few different methods to choose from, however, they can all be categorised into two groups. Methods that generate training data (experience) from the same policy that is being evaluated are called **on-policy**. Methods that have two separate policies, one for generating experience and another for evaluation, are called **off-policy**.
 
 The method we chose for this project was on-policy **Proximal Policy Optimization** or **PPO** by OpenAI. To quote their website directly, RL algorithms have a lot of 'moving parts' which makes the training of agents very unstable. PPO, however, uses a clipped objective function which reduces changes to the current policy so that the performance doesn't suddenly decline whilst training. A detailed explanation of the objective function can be found [here](https://openai.com/blog/openai-baselines-ppo/).
 
@@ -124,7 +124,7 @@ At this stage, one could implement a so-called 'mask' over the unavailable actio
 
 ## Final Results
 
-The best trained model so far can not answer the original question of the best possible strategy for playing <i>Oh Hell</i>. The policy, however, shows a large improvement from a random agent; it will sometimes excute flawless runs, predicting a number of tricks, winning that number, and getting the extra bonus of 10 tricks and with no ineligible actions selected. This model will select an average of just under 2 unavailable actions per game -  of which is a massive improvement from the original 10 out of 11.
+The best trained model so far can not answer the original question of the best possible strategy for playing *Oh Hell*. The policy, however, shows a large improvement from a random agent; it will sometimes execute flawless runs, predicting a number of tricks, winning that number, and getting the extra bonus of 10 tricks and with no ineligible actions selected. This model will select an average of just under 2 unavailable actions per game which is a massive improvement from the original 10 out of 11.
 
 ![gameplay](/images/oh-hell/gameplay1.jpg)
 
