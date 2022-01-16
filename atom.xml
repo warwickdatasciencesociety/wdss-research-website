@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://research.wdss.io/"/>
-  <updated>2021-12-04T00:00:00.000Z</updated>
+  <updated>2021-01-16T00:00:00.000Z</updated>
   <id>https://research.wdss.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>One-Hit Wonders</title>
+    <link href="https://research.wdss.io/one-hit-wonders/"/>
+    <id>https://research.wdss.io/one-hit-wonders/</id>
+    <published>2022-01-16T00:00:00.000Z</published>
+    <updated>2021-01-16T00:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      According to Wikipedia, a one-hit wonder is any entity that achieves mainstream popularity, often for only one piece of work, and becomes known among the general public solely for that momentary success. In this project we use the publicly available data from Spotify to find artists in the music industry who can be regarded as one-hit wonders.
+    
+    </summary>
+    
+    
+      <category term="Humanities" scheme="https://research.wdss.io/categories/Humanities/"/>
+    
+      <category term="Sociology" scheme="https://research.wdss.io/categories/Humanities/Sociology/"/>
+    
+    
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
+    
+      <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
+    
+  </entry>
   
   <entry>
     <title>Oh Hell! - Reinforcement Learning for solving card games</title>
