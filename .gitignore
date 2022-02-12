@@ -14,3 +14,6 @@ public/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Data
+content/sales-forecasting-challenge/store-sales-time-series-forecasting-data
