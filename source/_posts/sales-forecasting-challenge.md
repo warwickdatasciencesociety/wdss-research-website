@@ -153,12 +153,6 @@ In this section, we go through fitting an ARIMA model on a time series for one o
 
 We are now going to create a dataset for the sales of <b> Bread/Bakery </b> in <b> store 44 </b>.
 
-
-```python
-train = df_raw
-df = train.loc[(train.store_nbr == 44) & (train.family == 'BREAD/BAKERY')]
-```
-
 One very important assumption of an ARIMA model is for the data to be stationary. We will test this with a hypothesis test called ADF (Augmented Dickey-Fuller).
 
 <b> NOTE: </b> The null hypothesis of the ADF test is that the time series is non-stationary. 
