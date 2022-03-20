@@ -244,12 +244,12 @@ Centrality seeks to answer the question of which node is the most important. To 
 1. **Degree**
 
 The most important node would be the one with the most edges. Simple and intuitive.
-Degree centrality of a node $x$ is defined as $$\sum_{y \in V} \frac{1}{d(x,y)}$$
+Degree centrality of a node $x$ is defined as $$\sum_{y\in V}\frac{1}{d(x,y)}$$
 
 2. **Closeness**
 
 By measuring the average distance of a node to all other nodes, the cardinal node is determined to be the one closest to everybody.
-The closeness of a node $x$ is defined as $$\frac{\sum_{y \in V} d(x,y)}{|V|}$$
+The closeness of a node $x$ is defined as $$\frac{\sum_{y \in V}d(x,y)}{|V|}$$
 
 3. **Betweenness**
 
@@ -286,7 +286,7 @@ Given a graph, Node2Vec creates a lower-dimensional representation of it referre
 ### Construct splits of the input data
 
 We need to be carful how to split our data intro training, validation and test sets in order to avoid **data leakage**.
-{% note error %}
+{% note danger %}
 **Data leakage** happens when the training data contains information about the target, but similar data will not be available when the model is used for prediction. This leads to high performance on the training set, but the model will perform poorly in production.
 {% endnote %}
 We make use of the `EdgeSplitter` from the [StellarGraph](https://stellargraph.readthedocs.io/en/stable/) Python package and the standard `train_test_split` function from [scikit-learn](https://scikit-learn.org/stable/) for creating the following subsets of the original data:
