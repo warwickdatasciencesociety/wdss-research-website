@@ -244,12 +244,14 @@ Centrality seeks to answer the question of which node is the most important. To 
 1. **Degree**
 
 The most important node would be the one with the most edges. Simple and intuitive.
-Degree centrality of a node $x$ is defined as $$\sum_{y\in V}\frac{1}{d(x,y)}$$
+Degree centrality of a node $x$ is defined as 
+$$\sum_{y\in V}\frac{1}{d(x,y)}$$
 
 2. **Closeness**
 
 By measuring the average distance of a node to all other nodes, the cardinal node is determined to be the one closest to everybody.
-The closeness of a node $x$ is defined as $$\frac{\sum_{y \in V}d(x,y)}{|V|}$$
+The closeness of a node $x$ is defined as
+$$\frac{\sum_{y \in V}d(x,y)}{|V|}$$
 
 3. **Betweenness**
 
@@ -258,7 +260,9 @@ $$g(v) = \sum_{s \neq t \neq v}\frac{\sigma_{st}(v)}{\sigma_{st}}$$
 
 4. **Eigenvector**
 
-We do not go into the explanation for why this method is followed however, we state it here. The largest eigenvalue of the adjacency matrix is computed and the eigenvector centrality of a node is the corresponding position in that eigenvalue's eigenvector. This means that if our vertices are $(v_1,...,v_n)$, the vector of eigenvalue centralities $x$ satisfies $$Ax = \lambda x$$ where $A$ is the adjacency matrix and $\lambda$ is the largest eigenvalue.
+We do not go into the explanation for why this method is followed however, we state it here. The largest eigenvalue of the adjacency matrix is computed and the eigenvector centrality of a node is the corresponding position in that eigenvalue's eigenvector. This means that if our vertices are $(v_1,...,v_n)$, the vector of eigenvalue centralities $x$ satisfies 
+$$Ax = \lambda x$$ 
+where $A$ is the adjacency matrix and $\lambda$ is the largest eigenvalue.
 
 For all the centrality measures we plot the entire graph such the size of its nodes corresponds to their centrality.
 
