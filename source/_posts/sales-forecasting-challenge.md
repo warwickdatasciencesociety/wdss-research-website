@@ -10,6 +10,8 @@ contacts_plus:
 - "https://www.linkedin.com/in/ivan-silajev-04957a18b/"
 - "https://www.linkedin.com/in/hugo-ryan-ng-312730197/"
 - "https://www.linkedin.com/in/amr-abdelmotteleb-3574691ba/"
+editor: "Janique Krasnowska"
+editor_contact: "https://www.linkedin.com/in/janique-krasnowska/"
 tags:
 - machine learning
 - time series
