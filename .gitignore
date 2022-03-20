@@ -17,3 +17,4 @@ __pycache__/
 
 # Data
 content/sales-forecasting-challenge/store-sales-time-series-forecasting-data
+Content/link-predictions/data/*
