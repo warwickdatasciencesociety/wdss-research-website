@@ -122,9 +122,9 @@
     
       <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
-      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
-    
       <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
+    
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
     
   </entry>
   
@@ -311,11 +311,11 @@
       <category term="Physics" scheme="https://research.wdss.io/categories/Natural-Sciences/Physics/"/>
     
     
+      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
       <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
     
       <category term="animation" scheme="https://research.wdss.io/tags/animation/"/>
-    
-      <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
   </entry>
   
@@ -344,9 +344,9 @@
     
       <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
     
-      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
-    
       <category term="data-analysis" scheme="https://research.wdss.io/tags/data-analysis/"/>
+    
+      <category term="web-scraping" scheme="https://research.wdss.io/tags/web-scraping/"/>
     
   </entry>
   
@@ -394,9 +394,9 @@
       <category term="Statistics" scheme="https://research.wdss.io/categories/Mathematics/Statistics/"/>
     
     
-      <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
-    
       <category term="visualization" scheme="https://research.wdss.io/tags/visualization/"/>
+    
+      <category term="simulation" scheme="https://research.wdss.io/tags/simulation/"/>
     
       <category term="monte-carlo" scheme="https://research.wdss.io/tags/monte-carlo/"/>
     

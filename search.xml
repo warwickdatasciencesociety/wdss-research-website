@@ -121,9 +121,9 @@
             
             <tag> visualization </tag>
             
-            <tag> web-scraping </tag>
-            
             <tag> data-analysis </tag>
+            
+            <tag> web-scraping </tag>
             
         </tags>
       
@@ -334,11 +334,11 @@
       
         <tags>
             
+            <tag> visualization </tag>
+            
             <tag> simulation </tag>
             
             <tag> animation </tag>
-            
-            <tag> visualization </tag>
             
         </tags>
       
@@ -371,9 +371,9 @@
             
             <tag> visualization </tag>
             
-            <tag> web-scraping </tag>
-            
             <tag> data-analysis </tag>
+            
+            <tag> web-scraping </tag>
             
         </tags>
       
@@ -429,9 +429,9 @@
       
         <tags>
             
-            <tag> simulation </tag>
-            
             <tag> visualization </tag>
+            
+            <tag> simulation </tag>
             
             <tag> monte-carlo </tag>
             
